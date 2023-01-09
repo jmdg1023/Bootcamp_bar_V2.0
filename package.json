@@ -1,0 +1,19 @@
+{
+  "name": "bootcamp_bar_v2.0",
+  "version": "1.0.0",
+  "description": "Bootcamp bar group project",
+  "main": "index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jmdg1023/Bootcamp_bar_V2.0.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jmdg1023/Bootcamp_bar_V2.0/issues"
+  },
+  "homepage": "https://github.com/jmdg1023/Bootcamp_bar_V2.0#readme"
+}
