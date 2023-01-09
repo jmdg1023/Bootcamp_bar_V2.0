@@ -1,10 +1,8 @@
 # Bootcamp_bar_V2.0
 
-# Bookings at Bootcamp Bar
-
 ## Deployment link
 
-<https://bootcamp-bar.herokuapp.com/>
+<https:///>
 
 ## Table of Contents
 
@@ -23,6 +21,9 @@
 - 24 hour usage and response
 - When a user signs up for an account, a confirmation email is sent to the user
 - Automatically tests for capacity when the user attempts to make a reservation, will not allow the user to make a reservation if the capacity is full
+- User can add, delete and modify cart
+- Admin portal log in
+- Drinks menu page with upvote and downvote
 
 ## Credits
 
@@ -66,7 +67,6 @@ Response
 Features that would be included in future development:
 
 - When users choose to subscribe to the Newsletter, they are sent a monthly email with an overview of events and info for the bar
-- Online poll in login dashboard so that users can vote for their favourite drink
 - Online bills and payments/credit system
 - Mobile app
 
