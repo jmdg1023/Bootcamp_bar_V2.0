@@ -1,19 +1,18 @@
 {
   "name": "bootcamp_bar_v2.0",
   "version": "1.0.0",
-  "description": "Bootcamp bar group project",
-  "main": "index.js",
+  "description": "",
+  "main": "server/server.js",
   "scripts": {
-    "test": "test"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/jmdg1023/Bootcamp_bar_V2.0.git"
+    "start": "node server/server.js --ignore client",
+    "develop": "concurrently \"cd server && npm run watch\" \"cd client && npm start\"",
+    "install": "cd server && npm i && cd ../client && npm i",
+    "seed": "cd server && npm run seed",
+    "build": "cd client && npm run build"
   },
   "author": "",
   "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/jmdg1023/Bootcamp_bar_V2.0/issues"
-  },
-  "homepage": "https://github.com/jmdg1023/Bootcamp_bar_V2.0#readme"
+  "devDependencies": {
+    "concurrently": "^5.3.0"
+  }
 }
