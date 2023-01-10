@@ -29,15 +29,15 @@
 
 Third-party resources used:
 
-- Normalise CSS (reset css stylesheet): <https://github.com/necolas/normalize.css>
+- React: <https://reactjs.org/>
 - Nodemailer: <https://nodemailer.com/about/>
 - Bycrypt: <https://www.npmjs.com/package/bcrypt>
 - Dotenv: <https://www.npmjs.com/package/dotenv>
 - Eslint:<https://www.npmjs.com/package/eslint>
 - Express JS: <https://expressjs.com/>
-- Handlebars: <https://handlebarsjs.com/>
-- mySQL2: <https://www.npmjs.com/package/mysql2>
-- moment JS: <https://momentjs.com/>
+- graphQL: <https://graphql.org/>
+- mongo DB: <https://www.mongodb.com/>
+- JWT: <https://jwt.io/>
 
 ## Extra Info
 
@@ -74,24 +74,24 @@ Features that would be included in future development:
 
 Janine [Github](https://github.com/jmdg1023)
 
-- Sign up, Log in/out
-- eslint
-- jawsDB
-- Heroku Deployment
+- 
+- 
+- 
+- 
 
 Anisha [Github](https://github.com/anisha-sapkota)
 
-- Seeds and Models
-- Connecting API
-- Capacity API
-- Reservation/booking logic
+- 
+- 
+- 
+- 
 
 Salina [Github](https://github.com/slingshort)
 
-- UI/Handlebars
-- Connecting routes and API to UI
-- NPM nodemailer
-- Booking logic
+- 
+- 
+- 
+- 
 
 ## License
 
