@@ -1,25 +1,12 @@
-const { gql } = require('apollo-server-express');
+const { gql } = require("apollo-server-express");
 
 const typeDefs = gql`
-  type Category {
+  type Booking {
     _id: ID
-    name: String
-  }
-
-  type Product {
-    _id: ID
-    name: String
-    description: String
-    image: String
-    quantity: Int
-    price: Float
-    category: Category
-  }
-
-  type Order {
-    _id: ID
-    purchaseDate: String
-    products: [Product]
+    date: String
+    seats: Int
+    seating: String
+    user: String
   }
 
   type User {
@@ -27,11 +14,8 @@ const typeDefs = gql`
     firstName: String
     lastName: String
     email: String
-    orders: [Order]
-  }
-
-  type Checkout {
-    session: ID
+    isSubscriber: Boolean
+    bookings: [Booking]
   }
 
   type Auth {
@@ -39,21 +23,29 @@ const typeDefs = gql`
     user: User
   }
 
+  input AddUserInput {
+    firstName: String!
+    lastName: String!
+    email: String!
+    password: String!
+    isSubscriber: Boolean!
+  }
+
+  input AddBookingInput {
+    date: String!
+    seats: Int!
+    seating: String!
+  }
+
   type Query {
-    categories: [Category]
-    products(category: ID, name: String): [Product]
-    product(_id: ID!): Product
-    user: User
-    order(_id: ID!): Order
-    checkout(products: [ID]!): Checkout
+    me: User
   }
 
   type Mutation {
-    addUser(firstName: String!, lastName: String!, email: String!, password: String!): Auth
-    addOrder(products: [ID]!): Order
-    updateUser(firstName: String, lastName: String, email: String, password: String): User
-    updateProduct(_id: ID!, quantity: Int!): Product
     login(email: String!, password: String!): Auth
+    addUser(input: AddUserInput!): Auth
+    addBooking(input: AddBookingInput!): User
+    deleteBooking(bookingId: ID!): User
   }
 `;
 
