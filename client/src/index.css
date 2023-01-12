@@ -1,7 +1,7 @@
 :root {
-  --primary: #232F3E;
+  --primary: #791e85;
   --secondary: #F3A847;
-  --tertiary: #B12704;
+  --tertiary: #858180;
   --light: #fafafa;
   --dark: #272f32;
   --error: rgb(228, 46, 1);
@@ -21,11 +21,11 @@ body {
 body {
   margin: 0;
   padding: 0;
-  font-family: 'Karla', sans-serif;
+  font-family:'Courier New', Courier, monospace;
   font-weight: 400;
   line-height: 1.5;
-  font-size: 16px;
-  color: var(--dark);
+  font-size: 24px;
+  color: var(--light);
 }
 
 h1,
@@ -34,8 +34,8 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: 'Rubik', sans-serif;
-  font-weight: 500;
+  font-family:'Courier New', Courier, monospace;
+  font-weight: 400;
   margin: 5px 0;
   line-height: 1.25;
 }
@@ -201,6 +201,15 @@ input:focus {
 
 .error-text {
   color: var(--error);
+}
+
+.bg-login {
+  background: url('./assets/bar-bg.jpg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100vw;
+  height: 100vh;
 }
 
 @media screen and (max-width: 768px) {
