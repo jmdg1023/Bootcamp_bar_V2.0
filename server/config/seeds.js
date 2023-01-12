@@ -120,7 +120,7 @@ db.once('open', async () => {
       image: 'grasshopper.jpg',
       price: 29,
       quantity: 1
-    }
+    },
     {
       name: 'fresh pear',
       description:
