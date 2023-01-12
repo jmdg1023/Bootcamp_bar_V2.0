@@ -1,10 +1,10 @@
 :root {
   --primary: #791e85;
-  --secondary: #F3A847;
-  --tertiary: #858180;
+  --secondary: #f6858f;
+  --tertiary: #e2d6d3;
   --light: #fafafa;
   --dark: #272f32;
-  --error: rgb(228, 46, 1);
+  --error: rgb(243, 83, 43);
   --spacing-one: calc(1rem * 0.5);
   --spacing-two: calc(1rem);
 }
@@ -26,6 +26,7 @@ body {
   line-height: 1.5;
   font-size: 24px;
   color: var(--light);
+  background-color: var(--dark);
 }
 
 h1,
@@ -210,6 +211,37 @@ input:focus {
   background-size: cover;
   width: 100vw;
   height: 100vh;
+}
+
+.bg-signup {
+  background: url('./assets/bar3-bg.jpg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100vw;
+  height: 100vh;
+}
+
+.bg-booking {
+  background: url('./assets/bar2-bg.jpg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100vw;
+  height: 100vh;
+}
+
+.bg-home {
+  background: url('./assets/bar4-bg.jpg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100vw;
+  height: 100vh;
+}
+
+.bg-cart {
+  background-color: #bc69c7;
 }
 
 @media screen and (max-width: 768px) {
