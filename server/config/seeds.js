@@ -5,11 +5,15 @@ db.once('open', async () => {
   await Category.deleteMany();
 
   const categories = await Category.insertMany([
-    { name: 'Food' },
-    { name: 'Household Supplies' },
-    { name: 'Electronics' },
-    { name: 'Books' },
-    { name: 'Toys' }
+    { name: 'Vodka' },
+    { name: 'Gin' },
+    { name: 'Tequila' },
+    { name: 'Rum' },
+    { name: 'Bourbon' },
+    { name: 'Mezcal' },
+    { name: 'Mocktail' },
+    { name: 'Yuzu' },
+   
   ]);
 
   console.log('categories seeded');
@@ -18,112 +22,124 @@ db.once('open', async () => {
 
   const products = await Product.insertMany([
     {
-      name: 'Tin of Cookies',
+      name: 'Vampires Attic',
       description:
-        'Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.',
-      image: 'cookie-tin.jpg',
+        'Black Vodka, Lemon Juice, Grape Juice, Club Soda, Dry Ice, Blackberries Garnish',
+      image: 'vampires-attic.jpg',
       category: categories[0]._id,
-      price: 2.99,
-      quantity: 500
+      price: 29,
+      quantity: 1
     },
     {
-      name: 'Canned Coffee',
+      name: 'All Greengit',
       description:
-        'Praesent sed lacinia mauris. Nulla congue nibh magna, at feugiat nunc scelerisque quis. Donec iaculis rutrum vulputate. Suspendisse lectus sem, vulputate ac lectus sed, placerat consequat dui.',
-      image: 'canned-coffee.jpg',
+        'Finlandia Vodka, lemon juice, bergamot cordial, lemon bitter, cucumber, rosemary, leaves of basil, Egg white',
+      image: 'all-green.jpg',
       category: categories[0]._id,
-      price: 1.99,
-      quantity: 500
+      price: 29,
+      quantity: 1
     },
     {
-      name: 'Toilet Paper',
+      name: 'Clover Club',
       category: categories[1]._id,
       description:
+        'Gin, fresh lemon juice, simple syrup, egg white, raspberries Garnish: pink rose',
+      image: 'clover-club.jpg',
+      price: 19,
+      quantity: 1
+    },
+    {
+      name: 'In My heart',
+      category: categories[1]._id,
+      description:
+        'Four Pillars Bloody Shiraz Gin, Fresh Lemon Juice, Hibiscus Syrup,Hibiscus Vanilla Ginger Brew',
+      image: 'in-my-heart.jpg',
+      price: 29,
+      quantity: 1
+    },
+    {
+      name: 'Glacier Sour',
+      category: categories[1]._id,
+      description:
+        'Gin, Supasawa,⁣ simple syrup⁣, pine liqueur,⁣ dash woodland bitters,⁣ Electric Sky Spirulina powder⁣',
+      image: 'glacier-sour.jpg',
+      price: 29,
+      quantity: 1
+    },
+    
+    {
+      name: 'Butterfly Pea',
+      category: categories[2]._id,
+      description:
+        'butterfly pea tequila, Top with grapefruit soda, lime,',
+      image: 'butterfly-pea-paloma.jpg',
+      price: 24,
+      quantity: 1
+    },
+    {
+      name: 'Physalis Rose margarita',
+      category: categories[2]._id,
+      description:
+        ' tequila blanco, lime juice syrup, triple sec, physalis berries, Rose Flower',
+      image: 'spicy-physalis-&-rose-margarita',
+      price: 30,
+      quantity: 1
+    },
+    {
+      name: 'Monito',
+      category: categories[3]._id,
+      description:
+        'The Real McCoy 3yr old Rum, Lime Juice, Simple Syrup, Blue Curacao, Mint Leaves, Soda Water',
+      image: 'monito.jpg',
+      price: 29,
+      quantity: 1
+    },
+    {
+      name: 'Bourbon Swizzle',
+      category: categories[4]._id,
+      description:
         'Donec volutpat erat erat, sit amet gravida justo sodales in. Phasellus tempus euismod urna. Proin ultrices nisi ut ipsum congue, vitae porttitor libero suscipit. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Aliquam lacinia a nisi non congue.',
-      image: 'toilet-paper.jpg',
-      price: 7.99,
+      image: 'barrell-proof-bourbon-swizzle.jpg',
+      price: 29,
       quantity: 20
     },
     {
-      name: 'Handmade Soap',
-      category: categories[1]._id,
+      name: 'Smoke',
+      category: categories[5]._id,
       description:
-        'Praesent placerat, odio vel euismod venenatis, lectus arcu laoreet felis, et fringilla sapien turpis vestibulum nisl.',
-      image: 'soap.jpg',
-      price: 3.99,
-      quantity: 50
+        'Mezcal, Pisco, fresh lime juice, simple syrup, Egg white, cucumber slice',
+      image: 'smoke.jpg',
+      price: 19,
+      quantity: 1
     },
     {
-      name: 'Set of Wooden Spoons',
-      category: categories[1]._id,
+      name: 'Grasshopper',
+      category: categories[5]._id,
       description:
-        'Vivamus ut turpis in purus pretium mollis. Donec turpis odio, semper vel interdum ut, vulputate at ex. Duis dignissim nisi vel tortor imperdiet finibus. Aenean aliquam sagittis rutrum.',
-      image: 'wooden-spoons.jpg',
-      price: 14.99,
-      quantity: 100
-    },
-    {
-      name: 'Camera',
-      category: categories[2]._id,
-      description:
-        'Vestibulum risus metus, luctus non tortor quis, tincidunt consectetur ex. Nullam vitae lobortis ligula, ut sagittis massa. Curabitur consectetur, tellus at pulvinar venenatis, erat augue cursus erat, eu ullamcorper eros lectus ultrices ipsum. Integer rutrum, augue vitae auctor venenatis, turpis turpis elementum orci, at sagittis risus mi a leo.',
-      image: 'camera.jpg',
-      price: 399.99,
-      quantity: 30
-    },
-    {
-      name: 'Tablet',
-      category: categories[2]._id,
-      description:
-        'In sodales, ipsum quis ultricies porttitor, tellus urna aliquam arcu, eget venenatis purus ligula ut nisi. Fusce ut felis dolor. Mauris justo ante, aliquet non tempus in, tempus ac lorem. Aliquam lacinia dolor eu sem eleifend ultrices. Etiam mattis metus metus. Sed ligula dui, placerat non turpis vitae, suscipit volutpat elit. Phasellus sagittis, diam elementum suscipit fringilla, libero mauris scelerisque ex, ac interdum diam erat non sapien.',
-      image: 'tablet.jpg',
-      price: 199.99,
-      quantity: 30
-    },
-    {
-      name: 'Tales at Bedtime',
-      category: categories[3]._id,
-      description:
-        'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum ornare diam quis eleifend rutrum. Aliquam nulla est, volutpat non enim nec, pharetra gravida augue. Donec vitae dictum neque. Pellentesque arcu lorem, fringilla non ligula ac, tristique bibendum erat. Ut a semper nibh. Quisque a mi et mi tempor ultricies. Maecenas eu ipsum eu enim hendrerit accumsan at euismod urna.',
-      image: 'bedtime-book.jpg',
-      price: 9.99,
-      quantity: 100
-    },
-    {
-      name: 'Spinning Top',
-      category: categories[4]._id,
-      description: 'Ut vulputate hendrerit nibh, a placerat elit cursus interdum.',
-      image: 'spinning-top.jpg',
-      price: 1.99,
-      quantity: 1000
-    },
-    {
-      name: 'Set of Plastic Horses',
-      category: categories[4]._id,
-      description:
-        'Sed a mauris condimentum, elementum enim in, rhoncus dui. Phasellus lobortis leo odio, sit amet pharetra turpis porta quis.',
-      image: 'plastic-horses.jpg',
-      price: 2.99,
-      quantity: 1000
-    },
-    {
-      name: 'Teddy Bear',
-      category: categories[4]._id,
-      description:
-        'Vestibulum et erat finibus erat suscipit vulputate sed vitae dui. Ut laoreet tellus sit amet justo bibendum ultrices. Donec vitae felis vestibulum, congue augue eu, finibus turpis.',
-      image: 'teddy-bear.jpg',
-      price: 7.99,
-      quantity: 100
-    },
-    {
-      name: 'Alphabet Blocks',
-      category: categories[4]._id,
-      description:
-        'Morbi consectetur viverra urna, eu fringilla turpis faucibus sit amet. Suspendisse potenti. Donec at dui ac sapien eleifend hendrerit vel sit amet lectus.',
-      image: 'alphabet-blocks.jpg',
-      price: 9.99,
-      quantity: 600
+        '▪️Del Maguey Vida Mezcal,Amaro Branca Menta, AbsintheTempus Fugit White Creme De Menthe, Heavy Cream, Dark Chocolate & Mint Sprig Garnish',
+      image: 'grasshopper.jpg',
+      price: 29,
+      quantity: 1
     }
+    {
+      name: 'fresh pear',
+      description:
+        ' Fresh Pear Juice, Lime Juice, Rose Water, Orange Bitters',
+      image: 'fresh-pear.jpg',
+      category: categories[6]._id,
+      price: 19,
+      quantity: 1
+    },
+    {
+      name: 'Mind traveller',
+      category: categories[7]._id,
+      description: 'Yuzu Liqueur, Campari, Lemon Juice, Angostura Bitters, Aquafaba',
+      image: 'mind-traveller.jpg',
+      price: 19,
+      quantity: 1
+    },
+    
+    
   ]);
 
   console.log('products seeded');
@@ -131,9 +147,9 @@ db.once('open', async () => {
   await User.deleteMany();
 
   await User.create({
-    firstName: 'Pamela',
-    lastName: 'Washington',
-    email: 'pamela@testmail.com',
+    firstName: 'John',
+    lastName: 'Smith',
+    email: 'johns@testmail.com',
     password: 'password12345',
     orders: [
       {
@@ -143,9 +159,9 @@ db.once('open', async () => {
   });
 
   await User.create({
-    firstName: 'Elijah',
-    lastName: 'Holt',
-    email: 'eholt@testmail.com',
+    firstName: 'Jane',
+    lastName: 'Doe',
+    email: 'janed@testmail.com',
     password: 'password12345'
   });
 
