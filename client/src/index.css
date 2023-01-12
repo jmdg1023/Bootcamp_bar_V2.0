@@ -22,7 +22,7 @@ body {
   margin: 0;
   padding: 0;
   font-family:'Courier New', Courier, monospace;
-  font-weight: 400;
+  font-weight: 300;
   line-height: 1.5;
   font-size: 24px;
   color: var(--light);
@@ -36,7 +36,7 @@ h4,
 h5,
 h6 {
   font-family:'Courier New', Courier, monospace;
-  font-weight: 400;
+  font-weight: 300;
   margin: 5px 0;
   line-height: 1.25;
 }
