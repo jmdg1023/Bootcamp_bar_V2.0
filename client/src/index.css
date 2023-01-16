@@ -1,5 +1,5 @@
 :root {
-  --primary: #791e85;
+  --primary: #5a545a;
   --secondary: #f6858f;
   --tertiary: #e2d6d3;
   --light: #fafafa;
@@ -36,7 +36,7 @@ h4,
 h5,
 h6 {
   font-family:'Courier New', Courier, monospace;
-  font-weight: 300;
+  font-weight: 200;
   margin: 5px 0;
   line-height: 1.25;
 }
@@ -81,7 +81,7 @@ a:hover {
 }
 
 header {
-  background: var(--primary);
+  background: var(--dark);
 }
 
 header a {
@@ -219,7 +219,11 @@ input:focus {
   color: var(--error);
 }
 
-.
+.black-card-bg {
+  background-color: rgba(0,0,0,.65);
+  padding: 2em;
+  border-radius: 10% 25%;
+}
 
 .bg-login {
   background: url('./assets/bar-bg.jpg');

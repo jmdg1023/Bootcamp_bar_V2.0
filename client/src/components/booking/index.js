@@ -37,12 +37,13 @@ function Booking() {
         setDate('');
         setSeatingTime('');
         setSeatingGuests('');
+        alert('booking submitted!');
     }
 
 
     return (
         <div className='center-content'>
-            <div className='mt-half-page'>
+            <div className='mt-half-page black-card-bg'>
                 <h1>Make a booking below!</h1>
                 <form className='flex-col'>
                     <p>Date:</p>
@@ -71,6 +72,7 @@ function Booking() {
                         value={seatingGuests}
                         name='seatingGuests'
                         type='number'
+                        min='1'
                         onChange={handleInput}
                     />
                     <button className='my-1' type='button' onClick={handleFormSubmit}> Submit Booking </button>
