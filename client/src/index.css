@@ -147,12 +147,23 @@ input:focus {
   flex-wrap: wrap;
 }
 
+.flex-col {
+  display: flex;
+  flex-direction: column;
+}
+
 .space-between {
   justify-content: space-between;
 }
 
 .flex-end {
   justify-content: flex-end;
+}
+
+.center-content {
+  display: flex;
+  align-content: center;
+  justify-content: center;
 }
 
 .mx-1 {
@@ -195,6 +206,10 @@ input:focus {
   padding-bottom: var(--spacing-two);
 }
 
+.mt-half-page {
+  margin-top: 10rem;
+}
+
 .card {
   width: 25%;
   text-align: center;
@@ -203,6 +218,8 @@ input:focus {
 .error-text {
   color: var(--error);
 }
+
+.
 
 .bg-login {
   background: url('./assets/bar-bg.jpg');

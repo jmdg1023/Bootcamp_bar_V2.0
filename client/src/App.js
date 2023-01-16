@@ -11,7 +11,7 @@ import { setContext } from '@apollo/client/link/context';
 import Home from './pages/Home';
 import Detail from './pages/Detail';
 import NoMatch from './pages/NoMatch';
-// import Dashboard from './pages/Dashboard';
+import Dashboard from './pages/Dashboard';
 import Signup from './pages/Signup';
 import Nav from './components/Nav';
 import { StoreProvider } from './utils/GlobalState';
@@ -49,11 +49,11 @@ function App() {
                 path="/" 
                 element={<Signup />} 
               />
-              {/* <Route 
+              <Route 
                 path="/dashboard" 
                 element={<Dashboard />} 
               />
-              <Route 
+              {/* <Route 
                 path="/success" 
                 element={<Success />} 
               />
@@ -67,8 +67,8 @@ function App() {
               />
               <Route
                 path="*" 
-                element={<NoMatch />} 
-              /> */}
+                element={<NoMatch />}  */}
+              />
             </Routes>
           </StoreProvider>
         </div>

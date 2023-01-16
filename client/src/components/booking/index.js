@@ -22,7 +22,7 @@ function Booking() {
             setDate(inputValue)
         } else if (inputType === 'seatingTime') {
             setSeatingTime (inputValue)
-        } else (inputType === 'seatingGuests') {
+        } else if (inputType === 'seatingGuests') {
             setSeatingGuests (inputValue)
         }
     };
@@ -41,29 +41,41 @@ function Booking() {
 
 
     return (
-        <div>
-            <p> Please pick a booking time here </p>
-            <form>
-                <input
-                    value={date}
-                    name='date'
-                    type='date'
-                    onChange={handleInput}
-                    ref={dateInputRef}
-                />
-                <select
-                    value={seatingTime}
-                    name='seatingTime'
-                    onChange={handleInput}
-                />
-                <input
-                    value={seatingGuests}
-                    name='seatingGuests'
-                    type='number'
-                    onChange={handleInput}
-                />
-                <button type='button' onClick={handleFormSubmit}> Submit Booking </button>
-            </form>
+        <div className='center-content'>
+            <div className='mt-half-page'>
+                <h1>Make a booking below!</h1>
+                <form className='flex-col'>
+                    <p>Date:</p>
+                    <input
+                        className='py-1'
+                        value={date}
+                        name='date'
+                        type='date'
+                        onChange={handleInput}
+                        ref={dateInputRef}
+                    />
+                    <p>Seating Time:</p>
+                    <select
+                        className='py-1'
+                        value={seatingTime}
+                        name='seatingTime'
+                        onChange={handleInput}
+                        placeholder='Please select a seating time'
+                    >
+                        <option value='6PM'>6PM</option>
+                        <option value='8PM'>8PM</option>
+                    </select>
+                    <p>Nubmer of guests:</p>
+                    <input
+                        className='py-1'
+                        value={seatingGuests}
+                        name='seatingGuests'
+                        type='number'
+                        onChange={handleInput}
+                    />
+                    <button className='my-1' type='button' onClick={handleFormSubmit}> Submit Booking </button>
+                </form>
+            </div>
         </div>
     );
 
