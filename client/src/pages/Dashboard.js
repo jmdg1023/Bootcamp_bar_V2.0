@@ -30,6 +30,7 @@ const Dashboard = () => {
                     </h1>
                     {user.bookings.map((bookings) => (
                         // TODO list all bookings associated with user, allow CRUD operations
+                        return bookings;
                     ))}
                 </>
             ) : null}
