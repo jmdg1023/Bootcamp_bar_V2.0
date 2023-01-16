@@ -1,18 +1,14 @@
 import React from "react";
-import ProductList from "../components/ProductList";
-import CategoryMenu from "../components/CategoryMenu";
-import Cart from "../components/Cart";
+import LoginComponent from "../components/LoginComponent";
 
-const Home = () => {
+const Login = () => {
   return (
     <div className="bg-home">
       <div className="container">
-        <CategoryMenu />
-        <ProductList />
-        <Cart />
+        <LoginComponent />
       </div>
     </div>
   );
 };
 
-export default Home;
+export default Login;
