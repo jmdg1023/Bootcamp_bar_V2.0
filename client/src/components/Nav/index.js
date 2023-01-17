@@ -9,11 +9,11 @@ function Nav() {
       return (
         <ul className="flex-row">
           <li className="mx-1">
-            <Link to="/orderHistory">
-              Order History
+            <Link to="/Menu">
+              View Menu
             </Link>
           </li>
-          <li className="mx-1">
+          <li className="mx-2">
             {/* this is not using the Link component to logout or user and then refresh the application to the start */}
             <a href="/" onClick={() => Auth.logout()}>
               Logout
@@ -22,20 +22,7 @@ function Nav() {
         </ul>
       );
     } else {
-      return (
-        <ul className="flex-row">
-          <li className="mx-1">
-            <Link to="/signup">
-              Signup
-            </Link>
-          </li>
-          <li className="mx-1">
-            <Link to="/login">
-              Login
-            </Link>
-          </li>
-        </ul>
-      );
+      return (null);
     }
   }
 
@@ -43,8 +30,8 @@ function Nav() {
     <header className="flex-row px-1">
       <h1>
         <Link to="/">
-          <span role="img" aria-label="shopping bag">🛍️</span>
-          -Shop-Shop
+          <span role="img" aria-label="shopping bag">🥂</span>
+          Bootcamp Bar V2.0
         </Link>
       </h1>
 

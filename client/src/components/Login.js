@@ -1,23 +1,23 @@
-import React, { useState } from 'react';
-import { useMutation } from '@apollo/client';
-import { Link } from 'react-router-dom';
-import { LOGIN } from '../utils/mutations';
-import Auth from '../utils/auth';
+import { useMutation } from "@apollo/client";
+import React, { useState } from "react";
+import { Link } from "react-router-dom";
+import Auth from "../utils/auth";
+import { LOGIN } from "../utils/mutations";
 
-function Login(props) {
-  const [formState, setFormState] = useState({ email: '', password: '' });
+function LoginComponent() {
+  const [formState, setFormState] = useState({ email: "", password: "" });
   const [login, { error }] = useMutation(LOGIN);
 
   const handleFormSubmit = async (event) => {
     event.preventDefault();
     try {
-      const mutationResponse = await login({
-        variables: { email: formState.email, password: formState.password },
+      const response = await login({
+        variables: formState,
       });
-      const token = mutationResponse.data.login.token;
+      const token = response.data.login.token;
       Auth.login(token);
-    } catch (e) {
-      console.log(e);
+    } catch (error) {
+      console.error(error);
     }
   };
 
@@ -30,15 +30,16 @@ function Login(props) {
   };
 
   return (
-    <div className="container my-1">
-      <Link to="/signup">← Go to Signup</Link>
+    <div className="black-card-bg">
+      <Link to="/signup">← Don't have an account yet? Signup here.</Link>
 
       <h2>Login</h2>
       <form onSubmit={handleFormSubmit}>
         <div className="flex-row space-between my-2">
-          <label htmlFor="email">Email address:</label>
+          <label htmlFor="email">Email:</label>
           <input
-            placeholder="youremail@test.com"
+            required
+            placeholder="john.smith@example.com"
             name="email"
             type="email"
             id="email"
@@ -46,12 +47,13 @@ function Login(props) {
           />
         </div>
         <div className="flex-row space-between my-2">
-          <label htmlFor="pwd">Password:</label>
+          <label htmlFor="password">Password:</label>
           <input
-            placeholder="******"
+            required
+            placeholder="********"
             name="password"
             type="password"
-            id="pwd"
+            id="password"
             onChange={handleChange}
           />
         </div>
@@ -68,4 +70,4 @@ function Login(props) {
   );
 }
 
-export default Login;
+export default LoginComponent;

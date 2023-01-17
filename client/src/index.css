@@ -1,10 +1,10 @@
 :root {
-  --primary: #232F3E;
-  --secondary: #F3A847;
-  --tertiary: #B12704;
+  --primary: #5a545a;
+  --secondary: #f6858f;
+  --tertiary: #acb5f0;
   --light: #fafafa;
   --dark: #272f32;
-  --error: rgb(228, 46, 1);
+  --error: rgb(243, 83, 43);
   --spacing-one: calc(1rem * 0.5);
   --spacing-two: calc(1rem);
 }
@@ -21,11 +21,12 @@ body {
 body {
   margin: 0;
   padding: 0;
-  font-family: 'Karla', sans-serif;
-  font-weight: 400;
+  font-family:'Courier New', Courier, monospace;
+  font-weight: 300;
   line-height: 1.5;
-  font-size: 16px;
-  color: var(--dark);
+  font-size: 24px;
+  color: var(--light);
+  background-color: var(--dark);
 }
 
 h1,
@@ -34,8 +35,8 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: 'Rubik', sans-serif;
-  font-weight: 500;
+  font-family:'Courier New', Courier, monospace;
+  font-weight: 200;
   margin: 5px 0;
   line-height: 1.25;
 }
@@ -72,7 +73,6 @@ p {
 a {
   color: var(--tertiary);
   text-decoration: none;
-  font-weight: bold;
 }
 
 a:hover {
@@ -80,7 +80,7 @@ a:hover {
 }
 
 header {
-  background: var(--primary);
+  background: var(--dark);
 }
 
 header a {
@@ -141,17 +141,37 @@ input:focus {
   margin-right: auto;
 }
 
-.flex-row {
+.flex-wrap {
   display: flex;
   flex-wrap: wrap;
+}
+
+.flex-row {
+  display: flex;
+  flex-direction: row;
+}
+
+.flex-col {
+  display: flex;
+  flex-direction: column;
 }
 
 .space-between {
   justify-content: space-between;
 }
 
+.space-evenly {
+  justify-content: space-evenly;
+}
+
 .flex-end {
   justify-content: flex-end;
+}
+
+.center-content {
+  display: flex;
+  align-content: center;
+  justify-content: center;
 }
 
 .mx-1 {
@@ -194,13 +214,66 @@ input:focus {
   padding-bottom: var(--spacing-two);
 }
 
-.card {
+.mt-half-page {
+  margin-top: 10rem;
+}
+
+.product-card {
   width: 25%;
   text-align: center;
+  background-color: rgba(0,0,0,.65);
+  margin:1rem;
 }
 
 .error-text {
   color: var(--error);
+}
+
+.black-card-bg {
+  background-color: rgba(0,0,0,.65);
+  padding: 4em;
+  margin: 4rem;
+  border-radius: 10% 25%;
+  width: fit-content;
+}
+
+.bg-home {
+  background: url('./assets/bar-bg.jpg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100vw;
+  height: 100vh;
+}
+
+.bg-signup {
+  background: url('./assets/bar3-bg.jpg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100vw;
+  height: 100vh;
+}
+
+.bg-dashboard {
+  background: url('./assets/bar2-bg.jpg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100vw;
+  height: 100vh;
+}
+
+.bg-menu {
+  background: url('./assets/bar4-bg.jpg');
+  background-position: center;
+  background-size: cover;
+  width: 100vw;
+  height: 100vh;
+}
+
+.bg-cart {
+  background-color: #bc69c7;
 }
 
 @media screen and (max-width: 768px) {
