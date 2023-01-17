@@ -17,7 +17,8 @@
     "nodemon": "^2.0.20"
   },
   "dependencies": {
-    "jsonwebtoken": "^9.0.0"
+    "jsonwebtoken": "^9.0.0",
+    "nodemailer": "^6.9.0"
   },
   "engines" : { 
     "node" : ">=16.0.0 <17.0.0"
