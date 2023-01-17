@@ -1,7 +1,7 @@
 :root {
   --primary: #5a545a;
   --secondary: #f6858f;
-  --tertiary: #e2d6d3;
+  --tertiary: #acb5f0;
   --light: #fafafa;
   --dark: #272f32;
   --error: rgb(243, 83, 43);
@@ -73,7 +73,6 @@ p {
 a {
   color: var(--tertiary);
   text-decoration: none;
-  font-weight: bold;
 }
 
 a:hover {
@@ -142,9 +141,14 @@ input:focus {
   margin-right: auto;
 }
 
-.flex-row {
+.flex-wrap {
   display: flex;
   flex-wrap: wrap;
+}
+
+.flex-row {
+  display: flex;
+  flex-direction: row;
 }
 
 .flex-col {
@@ -154,6 +158,10 @@ input:focus {
 
 .space-between {
   justify-content: space-between;
+}
+
+.space-evenly {
+  justify-content: space-evenly;
 }
 
 .flex-end {
@@ -210,9 +218,11 @@ input:focus {
   margin-top: 10rem;
 }
 
-.card {
+.product-card {
   width: 25%;
   text-align: center;
+  background-color: rgba(0,0,0,.65);
+  margin:1rem;
 }
 
 .error-text {
@@ -221,8 +231,10 @@ input:focus {
 
 .black-card-bg {
   background-color: rgba(0,0,0,.65);
-  padding: 2em;
+  padding: 4em;
+  margin: 4rem;
   border-radius: 10% 25%;
+  width: fit-content;
 }
 
 .bg-home {
@@ -255,7 +267,6 @@ input:focus {
 .bg-menu {
   background: url('./assets/bar4-bg.jpg');
   background-position: center;
-  background-repeat: no-repeat;
   background-size: cover;
   width: 100vw;
   height: 100vh;
