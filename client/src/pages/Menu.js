@@ -4,7 +4,7 @@ import CategoryMenu from "../components/CategoryMenu";
 
 const Menu = () => {
   return (
-    <div className="bg-home">
+    <div className="bg-menu">
       <div className="container">
         <CategoryMenu />
         <ProductList />

@@ -141,6 +141,11 @@ input:focus {
   margin-right: auto;
 }
 
+.flex-wrap {
+  display: flex;
+  flex-wrap: wrap;
+}
+
 .flex-row {
   display: flex;
   flex-direction: row;
@@ -213,9 +218,11 @@ input:focus {
   margin-top: 10rem;
 }
 
-.card {
+.product-card {
   width: 25%;
   text-align: center;
+  background-color: rgba(0,0,0,.65);
+  margin:1rem;
 }
 
 .error-text {
@@ -260,7 +267,6 @@ input:focus {
 .bg-menu {
   background: url('./assets/bar4-bg.jpg');
   background-position: center;
-  background-repeat: no-repeat;
   background-size: cover;
   width: 100vw;
   height: 100vh;
