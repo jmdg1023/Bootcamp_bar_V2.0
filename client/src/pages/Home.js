@@ -1,5 +1,6 @@
 import React from "react";
 import LoginComponent from "../components/Login";
+import Auth from "../utils/auth";
 
 const Login = () => {
   return (
@@ -9,11 +10,14 @@ const Login = () => {
           <div className="black-card-bg">
             <h1> Welcome to Bootcamp Bar V2.0 </h1>
             <br></br>
-            <h3>Welcome to the exclusive hidden bar for coding bootcamp students. Please login to view our menu or to make a booking ahead of time.</h3>
+            <h3>
+              Welcome to the exclusive hidden bar for coding bootcamp students.
+              Please login to view our menu or to make a booking ahead of time.
+            </h3>
           </div>
-          </div>
+        </div>
         <div className="mt-half-page">
-          <LoginComponent />
+          {!Auth.loggedIn() && <LoginComponent />}
         </div>
       </div>
     </div>
