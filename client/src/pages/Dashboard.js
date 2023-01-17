@@ -19,22 +19,24 @@ const Dashboard = () => {
     }
 
     return(
-        <div className='bg-booking'>
-            {/* format flex aside */}
+        <div className='bg-dashboard'>
+            {user ? (
+          <>
+            <h2>
+              Welcome {user.firstName} !
+            </h2>
             <Booking/>
-{/* 
-            {user? (
-                <>
-                    <h1>
-                        Welcome {user.firstName}
-                    </h1>
-                    {user.bookings.map((bookings) => {
-                        // TODO list all bookings associated with user, allow CRUD operations
-                        return bookings;
-                    })}
-                </>
-            ) : null} */}
-
+            {user.bookings.map((booking) => (
+              <div key={booking._id} className="my-2">
+                <h3>
+                  {new Date(parseInt(booking.date)).toLocaleDateString()}
+                </h3>
+                <p>{booking.seats}</p>
+                <p>{booking.seating}</p>
+                </div>
+            ))}
+          </>
+        ) : null}
         </div>
     )
 }
