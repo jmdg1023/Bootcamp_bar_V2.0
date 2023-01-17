@@ -30,8 +30,8 @@ function LoginComponent() {
   };
 
   return (
-    <div className="container my-1">
-      <Link to="/signup">← Go to Signup</Link>
+    <div className="black-card-bg">
+      <Link to="/signup">← Don't have an account yet? Signup here.</Link>
 
       <h2>Login</h2>
       <form onSubmit={handleFormSubmit}>

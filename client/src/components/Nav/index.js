@@ -10,7 +10,7 @@ function Nav() {
         <ul className="flex-row">
           <li className="mx-1">
             <Link to="/Menu">
-              Menu
+              View Menu
             </Link>
           </li>
           <li className="mx-2">
@@ -22,15 +22,7 @@ function Nav() {
         </ul>
       );
     } else {
-      return (
-        <ul className="flex-row">
-          <li className="mx-2">
-            <Link to="/signup">
-              Signup
-            </Link>
-          </li>
-        </ul>
-      );
+      return (null);
     }
   }
 
