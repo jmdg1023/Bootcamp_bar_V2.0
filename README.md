@@ -1,15 +1,15 @@
 # Bootcamp_bar_V2.0
 
-## Deployment link
+## Deployment link📌
 
-<https:///>
+🔸 Heroku Deployment [link](https://)
 
 ## Table of Contents
 
 - [Project Description](#description)
-- [Installation information](#Installation)
+- [User Story](#User-Story)
 - [Credits](#Credits)
-- [Extra Info](#Info)
+- [Screenshots](#Screenshots)
 - [Future Development](#future-development)
 - [Contributors](#contributors)
 - [License](#license)
@@ -21,9 +21,14 @@
 - 24 hour usage and response
 - When a user signs up for an account, a confirmation email is sent to the user
 - Automatically tests for capacity when the user attempts to make a reservation, will not allow the user to make a reservation if the capacity is full
-- User can add, delete and modify cart
-- Admin portal log in
+- User can add, delete and modify their booking
 - Drinks menu page with upvote and downvote
+
+## User Story 👨
+
+```http
+As a customer, I want to be able to retrieve, add, update, and delete a booking at the bootcamp bar so that I can plan my night ahead of time and modify a booking if the situation demands it.”
+```
 
 ## Credits
 
@@ -39,59 +44,32 @@ Third-party resources used:
 - mongo DB: <https://www.mongodb.com/>
 - JWT: <https://jwt.io/>
 
-## Extra Info
+## Screenshots
 
-### Capacity API functionality
+![Index](./client/src/assets/index.jpg)
 
-Returns the number of available seats by seating time.
+![Signup](./client/src/assets/signup.jpg)
 
-POST /api/capacity
-
-```json
-{
-  "date": "07/11/2022"
-}
-```
-
-Response
-
-```json
-{
-  "6PM": 30,
-  "8PM": 30
-}
-```
 
 ## Future Development
 
 Features that would be included in future development:
 
-- When users choose to subscribe to the Newsletter, they are sent a monthly email with an overview of events and info for the bar
-- Online bills and payments/credit system
-- Mobile app
+- Payment System - Allowing clients to pay their bill and reservation online.
+- Mobile app - Creating App for faster operation and personalized experience.
+- Chatbot - an app that aids in customer service, engagement, and support by replacing or augmenting human support agents with artificial intelligence (AI)
+- Table picker - A map showing where tables are located and how many seats are available
+
 
 ## Contributors
 
-Janine [Github](https://github.com/jmdg1023)
+🔸 Janine [Github](https://github.com/jmdg1023) 
 
-- 
-- 
-- 
-- 
+🔸 Anisha [Github](https://github.com/anisha-sapkota)
 
-Anisha [Github](https://github.com/anisha-sapkota)
+🔸 Salina [Github](https://github.com/slingshort)
 
-- 
-- 
-- 
-- 
 
-Salina [Github](https://github.com/slingshort)
-
-- 
-- 
-- 
-- 
 
 ## License
 
