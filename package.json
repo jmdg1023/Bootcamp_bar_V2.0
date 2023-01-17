@@ -18,5 +18,8 @@
   },
   "dependencies": {
     "jsonwebtoken": "^9.0.0"
+  },
+  "engines" : { 
+    "node" : ">=16.0.0 <17.0.0"
   }
 }
