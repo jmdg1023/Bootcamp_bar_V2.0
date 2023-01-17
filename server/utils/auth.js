@@ -1,8 +1,8 @@
-const jwt = require("jsonwebtoken");
+const jwt = require('jsonwebtoken');
 
 // set token secret and expiration date
-const secret = process.env.AUTH_SECRET ?? "1l8Cc43xsJ5pdp1XzMMr";
-const expiration = "2h";
+const secret = process.env.AUTH_SECRET ?? '1l8Cc43xsJ5pdp1XzMMr';
+const expiration = '2h';
 
 module.exports = {
   // function for our authenticated routes
@@ -13,8 +13,10 @@ module.exports = {
 
     // ["Bearer", "<tokenvalue>"]
     if (req.headers?.authorization) {
-      token = token.split(" ").pop().trim();
-    } else return;
+      token = token.split(' ').pop().trim();
+    } else {
+      return;
+    }
 
     // verify token and get user data out of it
     try {

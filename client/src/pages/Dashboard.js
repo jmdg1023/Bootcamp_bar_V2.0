@@ -1,13 +1,13 @@
-import React from "react";
+import React from 'react';
 // TODO add mutation in utils/mutations.js
 // import { useMutation } from '@apollo/client';
 // import { ADD_BOOKING } from '../utils/mutations';
-import { useQuery } from "@apollo/client";
-import BookingForm from "../components/bookingForm";
-import { QUERY_USER } from "../utils/queries";
+import { useQuery } from '@apollo/client';
+import BookingForm from '../components/bookingForm';
+import { QUERY_USER } from '../utils/queries';
 
 const Dashboard = () => {
-  const { loading, error, data } = useQuery(QUERY_USER);
+  const { data } = useQuery(QUERY_USER);
 
   return (
     <div className="bg-dashboard">

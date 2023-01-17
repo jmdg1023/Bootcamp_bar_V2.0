@@ -13,7 +13,7 @@ db.once('open', async () => {
     { name: 'Mezcal' },
     { name: 'Mocktail' },
     { name: 'Yuzu' },
-   
+
   ]);
 
   console.log('categories seeded');
@@ -66,7 +66,7 @@ db.once('open', async () => {
       price: 29,
       quantity: 1
     },
-    
+
     {
       name: 'Butterfly Pea',
       category: categories[2]._id,
@@ -138,8 +138,8 @@ db.once('open', async () => {
       price: 19,
       quantity: 1
     },
-    
-    
+
+
   ]);
 
   console.log('products seeded');
