@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
     // import { useMutation } from '@apollo/client';
     // import { ADD_BOOKING } from '../utils/mutations';
 import Auth from '../utils/auth';
-import Booking from '../components/booking';
+import BookingForm from '../components/bookingForm';
 import { useQuery, useReactiveVar } from '@apollo/client';
 import { QUERY_USER } from '../utils/queries'
 
@@ -20,13 +20,13 @@ const Dashboard = () => {
 
     return(
         <div className='bg-dashboard'>
-            {user ? (
+            {/* {user ? (
           <>
             <h2>
               Welcome {user.firstName} !
-            </h2>
-            <Booking/>
-            {user.bookings.map((booking) => (
+            </h2> */}
+            <BookingForm/>
+            {/* {user.bookings.map((booking) => (
               <div key={booking._id} className="my-2">
                 <h3>
                   {new Date(parseInt(booking.date)).toLocaleDateString()}
@@ -36,7 +36,7 @@ const Dashboard = () => {
                 </div>
             ))}
           </>
-        ) : null}
+        ) : null} */}
         </div>
     )
 }

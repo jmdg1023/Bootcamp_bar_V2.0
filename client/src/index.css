@@ -116,10 +116,6 @@ span[role="img"] {
   cursor: default;
 }
 
-form {
-  width: 40%;
-}
-
 input {
   font-size: 1rem;
   padding: 0.25rem;
@@ -236,6 +232,7 @@ input:focus {
   border-radius: 10% 25%;
   width: fit-content;
 }
+
 
 .bg-home {
   background: url('./assets/bar-bg.jpg');
