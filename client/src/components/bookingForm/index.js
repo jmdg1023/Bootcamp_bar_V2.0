@@ -3,7 +3,7 @@ import React, { useRef, useState } from 'react';
 // import authenicator for login
 // TODO validator for booking availibility
 
-function Booking() {
+function BookingForm() {
     // state variables
     const [date, setDate] = useState('');
     const dateInputRef = useRef(null);
@@ -83,4 +83,4 @@ function Booking() {
 
 }
 
-export default Booking;
+export default BookingForm;
