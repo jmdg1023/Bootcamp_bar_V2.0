@@ -1,13 +1,13 @@
 # Bootcamp_bar_V2.0
 
-## Deployment link
+## Deployment link📌
 
-<https:///>
+🔸 Heroku Deployment [link](https://)
 
 ## Table of Contents
 
 - [Project Description](#description)
-- [Installation information](#Installation)
+- [User Story](#User-Story)
 - [Credits](#Credits)
 - [Screenshots](#Screenshots)
 - [Future Development](#future-development)
@@ -23,6 +23,12 @@
 - Automatically tests for capacity when the user attempts to make a reservation, will not allow the user to make a reservation if the capacity is full
 - User can add, delete and modify their booking
 - Drinks menu page with upvote and downvote
+
+## User Story 👨
+
+```http
+As a customer, I want to be able to retrieve, add, update, and delete a booking at the bootcamp bar so that I can plan my night ahead of time and modify a booking if the situation demands it.”
+```
 
 ## Credits
 
@@ -41,8 +47,8 @@ Third-party resources used:
 ## Screenshots
 
 ![Index](./client/src/assets/index.jpg)
-![Signup](./client/src/assets/signup.jpg)
 
+![Signup](./client/src/assets/signup.jpg)
 
 
 ## Future Development
