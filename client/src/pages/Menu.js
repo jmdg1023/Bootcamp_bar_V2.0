@@ -1,8 +1,7 @@
-import React from "react";
-import ProductList from "../components/ProductList";
-import CategoryMenu from "../components/CategoryMenu";
-import StarRating from "../components/StarRating"
-
+import React from 'react';
+import CategoryMenu from '../components/CategoryMenu';
+import ProductList from '../components/ProductList';
+// import StarRating from "../components/StarRating"
 
 const Menu = () => {
   return (
@@ -10,11 +9,10 @@ const Menu = () => {
       <div className="container">
         <CategoryMenu />
         <ProductList />
-        <StarRating />
+        {/* <StarRating /> */}
       </div>
     </div>
   );
 };
-
 
 export default Menu;
