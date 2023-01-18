@@ -16,10 +16,10 @@ const Dashboard = () => {
           <>
             <h1 className="px-2 py-2">Welcome {data.me.firstName} !</h1>
             <div className="flex flex-col md:flex-row gap-4">
-              <div className="basis-3/7">
+              <div>
                 <BookingForm />
               </div>
-              <div className="active-bookings">
+              <div className="basis-4/7 bg-black-rgba w-full p-8 rounded-3xl">
                 <h3 className="underline">Your active bookings:</h3>
                 <Bookings bookings={data.me.bookings} />
               </div>

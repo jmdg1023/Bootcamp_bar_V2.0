@@ -36,14 +36,27 @@ function BookingForm() {
     }
   };
 
+  const getCurrentDate = () => {
+    const today = new Date();
+    const yyyy = today.getFullYear();
+    let mm = today.getMonth() + 1; // Months start at 0!
+    let dd = today.getDate();
+
+    if (mm < 10) mm = '0' + mm;
+    if (dd < 10) dd = '0' + dd;
+
+    return `${yyyy}-${mm}-${dd}`;
+  };
+
   return (
     <form className="bg-black-rgba flex flex-col p-8 rounded-3xl">
       <h2 className="font-sm">Make a booking below!</h2>
       <div className="w-full my-1">
         <p>Date:</p>
         <input
+          min={getCurrentDate()}
           required
-          className="w-full"
+          className="w-full text-black"
           name="date"
           type="date"
           onChange={handleChange}
@@ -53,7 +66,7 @@ function BookingForm() {
         <p>Seating Time:</p>
         <select
           required
-          className="w-full"
+          className="w-full text-black"
           name="seating"
           value={formState.seating}
           onChange={handleChange}
@@ -66,7 +79,7 @@ function BookingForm() {
         <p>Number of Guests:</p>
         <input
           required
-          className="w-full"
+          className="w-full text-black"
           name="seats"
           type="number"
           min="1"
