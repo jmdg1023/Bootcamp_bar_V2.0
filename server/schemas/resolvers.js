@@ -1,4 +1,4 @@
-const { User, Booking } = require("../models");
+const { User, Booking, Category } = require("../models");
 const { signToken } = require("../utils/auth");
 const { AuthenticationError } = require("apollo-server-express");
 
@@ -12,6 +12,7 @@ const resolvers = {
       }
       throw new AuthenticationError("You need to be logged in!");
     },
+    categories: async () => Category.find(),
   },
   Mutation: {
     // mutation for adding new user

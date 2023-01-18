@@ -18,6 +18,19 @@ const typeDefs = gql`
     bookings: [Booking]
   }
 
+  type Category {
+    _id: ID
+    name: String
+  }
+
+  type Product {
+    _id: ID
+    name: String
+    description: String
+    image: String
+    category: Category
+  }
+
   type Auth {
     token: ID
     user: User
@@ -39,6 +52,8 @@ const typeDefs = gql`
 
   type Query {
     me: User
+    categories: [Category]
+    prodeucts(category: ID, name: String): [Product]
   }
 
   type Mutation {
