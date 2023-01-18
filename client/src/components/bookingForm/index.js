@@ -1,12 +1,12 @@
-import { useMutation } from "@apollo/client";
-import React, { useState } from "react";
-import { ADD_BOOKING } from "../../utils/mutations";
+import { useMutation } from '@apollo/client';
+import React, { useState } from 'react';
+import { ADD_BOOKING } from '../../utils/mutations';
 
 function BookingForm() {
   // state variables
   const [formState, setFormState] = useState({
-    date: "",
-    seating: "6PM",
+    date: '',
+    seating: '6PM',
     seats: null,
   });
 
@@ -20,20 +20,19 @@ function BookingForm() {
     });
   };
 
-  const handleFormSubmit = async (e) => {
-    e.preventDefault();
+  const handleFormSubmit = async (event) => {
+    event.preventDefault();
     try {
-      const response = await addBooking({
+      await addBooking({
         variables: {
           input: { ...formState, seats: parseInt(formState.seats) },
         },
       });
-      console.log(response);
-      alert('Booking Submitted');
+      // reload page
+      window.location.reload();
       return;
     } catch (error) {
       console.error(error.message);
-    
     }
   };
 
@@ -71,8 +70,8 @@ function BookingForm() {
             onChange={handleChange}
           />
           <button className="my-1" type="button" onClick={handleFormSubmit}>
-            {" "}
-            Submit Booking{" "}
+            {' '}
+            Submit Booking{' '}
           </button>
         </form>
       </div>
