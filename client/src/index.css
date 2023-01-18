@@ -155,11 +155,6 @@ li {
   flex-wrap: wrap;
 }
 
-.flex-row {
-  display: flex;
-  flex-direction: row;
-}
-
 .flex-col {
   display: flex;
   flex-direction: column;
@@ -227,10 +222,6 @@ li {
   margin-top: 10rem;
 }
 
-.underline {
-  text-decoration: underline;
-}
-
 .product-card {
   width: 270px;
   text-align: center;
@@ -278,15 +269,6 @@ li {
   color: var(--error);
 }
 
-.black-card-bg {
-  background-color: rgba(0, 0, 0, 0.65);
-  padding: 4em;
-  margin: 4rem;
-  border-radius: 10% 25%;
-  width: fit-content;
-  height: fit-content;
-}
-
 .bg-home {
   background: url('./assets/bar-bg.jpg');
   background-position: center;
@@ -301,8 +283,6 @@ li {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  width: 100vw;
-  height: 100vh;
 }
 
 .bg-dashboard {
