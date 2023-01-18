@@ -1,23 +1,19 @@
-import React from "react";
-import LoginComponent from "../components/Login";
-import Auth from "../utils/auth";
+import React from 'react';
+import LoginComponent from '../components/Login';
+import Auth from '../utils/auth';
 
 const Login = () => {
   return (
     <div className="bg-home">
-      <div className="flex-row space-evenly">
-        <div className="mt-half-page">
-          <div className="black-card-bg">
-            <h1> Welcome to Bootcamp Bar V2.0 </h1>
-            <br></br>
-            <h3>
+      <div className="container flex flex-col h-screen justify-center items-center">
+        <h1 className="text-center font-bold mb-4"> Welcome to Bootcamp Bar</h1>
+        <div className="flex flex-col md:flex-row gap-4">
+          <div>
+            <p className="text-2xl">
               Welcome to the exclusive hidden bar for coding bootcamp students.
-              Please login to view our menu or to make a booking ahead of time.
-            </h3>
+            </p>
           </div>
-        </div>
-        <div className="mt-half-page">
-          {!Auth.loggedIn() && <LoginComponent />}
+          <div>{!Auth.loggedIn() && <LoginComponent />}</div>
         </div>
       </div>
     </div>

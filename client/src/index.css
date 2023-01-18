@@ -274,8 +274,6 @@ li {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  width: 100vw;
-  height: 100vh;
 }
 
 .bg-signup {
@@ -290,8 +288,6 @@ li {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  width: 100vw;
-  height: 100vh;
 }
 
 .bg-menu {
@@ -299,9 +295,6 @@ li {
   background-position: center;
   background-size: cover;
   background-repeat: repeat-y;
-  background-attachment: fixed;
-  width: 100vw;
-  height: 100vh;
 }
 
 .bg-detail {
@@ -310,8 +303,6 @@ li {
   background-size: cover;
   background-repeat: no-repeat;
   background-attachment: fixed;
-  width: 100vw;
-  height: 100vh;
 }
 
 @media screen and (max-width: 768px) {

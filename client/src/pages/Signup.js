@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 import Auth from '../utils/auth';
 import { ADD_USER } from '../utils/mutations';
 
-function Signup(props) {
+function Signup() {
   const [formState, setFormState] = useState({
     firstName: '',
     lastName: '',
@@ -110,7 +110,12 @@ function Signup(props) {
             />
           </div>
           <div className="flex justify-end">
-            <button className='text-white bg-pink-700 hover:bg-pink-800 focus:ring-4 focus:ring-pink-300 font-medium rounded-lg  px-5 py-2.5 mb-2  focus:outline-none' type="submit">Submit</button>
+            <button
+              className="text-white bg-pink-700 hover:bg-pink-800 focus:ring-4 focus:ring-pink-300 font-medium rounded-lg px-5 py-2.5 mb-2 focus:outline-none"
+              type="submit"
+            >
+              Signup
+            </button>
           </div>
           <Link to="/">← Already have an account? Go to Login</Link>
         </form>
