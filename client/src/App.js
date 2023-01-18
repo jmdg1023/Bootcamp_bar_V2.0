@@ -14,6 +14,7 @@ import Home from "./pages/Home";
 import Menu from "./pages/Menu";
 import NoMatch from "./pages/NoMatch";
 import Signup from "./pages/Signup";
+import Detail from "./pages/Detail"
 import { StoreProvider } from "./utils/GlobalState";
 
 // Construct our main GraphQL API endpoint
@@ -52,6 +53,7 @@ function App() {
               <Route path="/dashboard" element={<Dashboard />} />
               <Route path="/menu" element={<Menu />} />
               <Route path="/signup" element={<Signup />} />
+              <Route path="/menu/:id" element={<Detail />}/>
               <Route path="*" element={<NoMatch />} />
             </Routes>
           </StoreProvider>

@@ -6,7 +6,7 @@ function Nav() {
   function showNavigation() {
     if (Auth.loggedIn()) {
       return (
-        <ul className="flex-row">
+        <ul className="flex-row flex-end">
           <li className="mx-2">
             <Link to="/menu">View Menu</Link>
           </li>
@@ -27,10 +27,10 @@ function Nav() {
   }
 
   return (
-    <header className="flex-row px-1">
-      <h1>
+    <header className="flex-row px-1 space-between">
+      <h1 className='px-2 py-2'>
         <Link to="/">
-          <span role="img" aria-label="shopping bag">
+          <span role="img" aria-label="glasses clinking">
             🥂
           </span>
           Bootcamp Bar
