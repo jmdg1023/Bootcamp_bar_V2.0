@@ -1,3 +1,7 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 :root {
   --primary: #5a545a;
   --secondary: #f6858f;
@@ -21,7 +25,7 @@ body {
 body {
   margin: 0;
   padding: 0;
-  font-family:'Courier New', Courier, monospace;
+  font-family: 'Courier New', Courier, monospace;
   font-weight: 300;
   line-height: 1.5;
   font-size: 24px;
@@ -35,7 +39,7 @@ h3,
 h4,
 h5,
 h6 {
-  font-family:'Courier New', Courier, monospace;
+  font-family: 'Courier New', Courier, monospace;
   font-weight: 200;
   margin: 5px 0;
   line-height: 1.25;
@@ -92,7 +96,7 @@ button {
   font-size: 1rem;
   text-decoration: none;
   padding: 0.25rem 1rem;
-  border-radius: .5rem;
+  border-radius: 0.5rem;
   border: none;
   outline: none;
   cursor: pointer;
@@ -101,19 +105,19 @@ button {
 }
 
 button:hover {
-  opacity: .8;
+  opacity: 0.8;
 }
 
 button[disabled] {
   cursor: default;
-  opacity: .8;
+  opacity: 0.8;
 }
 
 img {
   max-width: 100%;
 }
 
-span[role="img"] {
+span[role='img'] {
   cursor: default;
 }
 
@@ -128,7 +132,7 @@ input {
 
 input:focus {
   border: 1px solid var(--secondary);
-  box-shadow: 0 0 .25rem rgba(0, 0, 0, .5);
+  box-shadow: 0 0 0.25rem rgba(0, 0, 0, 0.5);
 }
 
 .container {
@@ -222,7 +226,7 @@ input:focus {
 .product-card {
   width: 20%;
   text-align: center;
-  background-color: rgba(0,0,0,.65);
+  background-color: rgba(0, 0, 0, 0.65);
   margin: 1rem;
   padding: 2rem;
 }
@@ -234,16 +238,15 @@ input:focus {
   margin: 1rem;
   padding: 1rem;
   border-radius: 10%;
-  color:#272f32;
+  color: #272f32;
 }
 
 .booking-form {
-  width: 25%
-
+  width: 25%;
 }
 
-.active-bookings{
-  background-color: rgba(0,0,0,.65);
+.active-bookings {
+  background-color: rgba(0, 0, 0, 0.65);
   padding: 4em;
   margin: 4rem;
   border-radius: 10% 25%;
@@ -255,13 +258,12 @@ input:focus {
 }
 
 .black-card-bg {
-  background-color: rgba(0,0,0,.65);
+  background-color: rgba(0, 0, 0, 0.65);
   padding: 4em;
   margin: 4rem;
   border-radius: 10% 25%;
   width: fit-content;
 }
-
 
 .bg-home {
   background: url('./assets/bar-bg.jpg');
@@ -297,15 +299,4 @@ input:focus {
   background-attachment: fixed;
   width: 100vw;
   height: 100vh;
-
-}
-
-.bg-cart {
-  background-color: #bc69c7;
-}
-
-@media screen and (max-width: 768px) {
-  .card {
-    width: 100%;
-  }
 }
