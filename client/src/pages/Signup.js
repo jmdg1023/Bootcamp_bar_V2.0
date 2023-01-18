@@ -58,6 +58,7 @@ function Signup() {
           <div className="flex justify-between my-2">
             <label htmlFor="firstName">First Name:</label>
             <input
+              className="text-black"
               required
               placeholder="John"
               name="firstName"
@@ -69,6 +70,7 @@ function Signup() {
           <div className="flex justify-between my-2">
             <label htmlFor="lastName">Last Name:</label>
             <input
+              className="text-black"
               required
               placeholder="Smith"
               name="lastName"
@@ -80,6 +82,7 @@ function Signup() {
           <div className="flex justify-between my-2">
             <label htmlFor="email">Email:</label>
             <input
+              className="text-black"
               required
               placeholder="john.smith@example.com"
               name="email"
@@ -91,6 +94,7 @@ function Signup() {
           <div className="flex justify-between my-2">
             <label htmlFor="pwd">Password:</label>
             <input
+              className="text-black"
               required
               placeholder="********"
               name="password"
@@ -102,6 +106,7 @@ function Signup() {
           <div className="flex justify-between my-2">
             <label htmlFor="isSubscriber">Subscribe to newsletter:</label>
             <input
+              className="text-black"
               name="isSubscriber"
               type="checkbox"
               id="isSubscriber"

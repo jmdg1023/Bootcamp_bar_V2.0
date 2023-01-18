@@ -38,6 +38,7 @@ function LoginComponent() {
       <div className="flex justify-between my-2">
         <label htmlFor="email">Email:</label>
         <input
+          className="text-black"
           required
           placeholder="john.smith@example.com"
           name="email"
@@ -49,6 +50,7 @@ function LoginComponent() {
       <div className="flex justify-between my-2">
         <label htmlFor="password">Password:</label>
         <input
+          className="text-black"
           required
           placeholder="********"
           name="password"
