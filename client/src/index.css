@@ -215,10 +215,12 @@ input:focus {
 }
 
 .product-card {
-  width: 25%;
+  width: fit-content;
   text-align: center;
   background-color: rgba(0,0,0,.65);
-  margin:1rem;
+  margin: 1rem;
+  padding: 2rem;
+
 }
 
 .error-text {

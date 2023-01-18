@@ -7,12 +7,13 @@ import {
 import { useStoreContext } from '../../utils/GlobalState';
 import { QUERY_CATEGORIES } from '../../utils/queries';
 
+
 function CategoryMenu() {
   const [state, dispatch] = useStoreContext();
 
   const { categories } = state;
 
-  const { loading, data: categoryData } = useQuery(QUERY_CATEGORIES);
+  const { data: categoryData } = useQuery(QUERY_CATEGORIES);
 
   useEffect(() => {
     if (categoryData) {
@@ -20,18 +21,8 @@ function CategoryMenu() {
         type: UPDATE_CATEGORIES,
         categories: categoryData.categories,
       });
-      // categoryData.categories.forEach((category) => {
-      //   idbPromise('categories', 'put', category);
-      // });
-    } else if (!loading) {
-      // idbPromise('categories', 'get').then((categories) => {
-      //   dispatch({
-      //     type: UPDATE_CATEGORIES,
-      //     categories: categories,
-      //   });
-      // });
     }
-  }, [categoryData, loading, dispatch]);
+  }, [categoryData, dispatch]);
 
   const handleClick = (id) => {
     dispatch({
@@ -42,7 +33,7 @@ function CategoryMenu() {
 
   return (
     <div>
-      <h2>Alcohol base</h2>
+      <h2>Alcohol Base:</h2>
       {categories.map((item) => (
         <button
           key={item._id}

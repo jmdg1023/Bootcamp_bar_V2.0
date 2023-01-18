@@ -20,18 +20,8 @@ function ProductList() {
         type: UPDATE_PRODUCTS,
         products: data.products,
       });
-      data.products.forEach((product) => {
-        idbPromise('products', 'put', product);
-      });
-    } else if (!loading) {
-      idbPromise('products', 'get').then((products) => {
-        dispatch({
-          type: UPDATE_PRODUCTS,
-          products: products,
-        });
-      });
     }
-  }, [data, loading, dispatch]);
+  }, [data, dispatch]);
 
   function filterProducts() {
     if (!currentCategory) {
@@ -45,14 +35,17 @@ function ProductList() {
 
   return (
     <div className="my-2">
+      <h2>Our Products:</h2>
       {state.products.length ? (
-        <div className="flex-wrap">
+        <div className="flex-row">
           {filterProducts().map((product) => (
             <ProductItem
               key={product._id}
               _id={product._id}
               image={product.image}
               name={product.name}
+              price={product.price}
+              quantity={product.quantity}
             />
           ))}
         </div>
