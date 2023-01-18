@@ -9,6 +9,7 @@ function ProductItem(item) {
     image,
     name,
     _id,
+    description,
   } = item;
 
   return (
@@ -18,7 +19,7 @@ function ProductItem(item) {
           alt={name}
           src={`/images/${image}`}
         />
-        <p>{name}</p>
+        <p>{description}</p>
       </Link>
     </div>
   );

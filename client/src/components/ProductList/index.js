@@ -36,13 +36,14 @@ function ProductList() {
     <div className="my-2">
       <h2>Drink Menu</h2>
       {state.products.length ? (
-        <div className="flex-row">
+        <div className="flex-wrap">
           {filterProducts().map((product) => (
             <ProductItem
               key={product._id}
               _id={product._id}
               image={product.image}
               name={product.name}
+              // description={product.description}
             />
           ))}
         </div>

@@ -7,10 +7,10 @@ function Nav() {
     if (Auth.loggedIn()) {
       return (
         <ul className="flex-row">
-          <li className="mx-1">
+          <li className="mx-2">
             <Link to="/menu">View Menu</Link>
           </li>
-          <li className="mx-1">
+          <li className="mx-2">
             <Link to="/dashboard">Dashboard</Link>
           </li>
           <li className="mx-2">
