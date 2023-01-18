@@ -2,15 +2,16 @@ const { User, Booking, Category, Product } = require("../models");
 const { signToken } = require("../utils/auth");
 const { AuthenticationError } = require("apollo-server-express");
 
+
 const resolvers = {
   Query: {
     me: async (parent, args, context) => {
       if (context.user) {
         return User.findOne({ _id: context.user._id })
-          .select("-password")
-          .populate("bookings");
+          .select('-password')
+          .populate('bookings');
       }
-      throw new AuthenticationError("You need to be logged in!");
+      throw new AuthenticationError('You need to be logged in!');
     },
     categories: async () => Category.find(),
     products: async (parent, { category, name }) => {
@@ -45,13 +46,13 @@ const resolvers = {
       const user = await User.findOne({ email });
 
       if (!user) {
-        throw new AuthenticationError("No user with this email found!");
+        throw new AuthenticationError('No user with this email found!');
       }
 
       const correctPw = await user.isCorrectPassword(password);
 
       if (!correctPw) {
-        throw new AuthenticationError("Incorrect password!");
+        throw new AuthenticationError('Incorrect password!');
       }
 
       const token = signToken(user);
@@ -69,10 +70,10 @@ const resolvers = {
           {
             $push: { bookings: booking },
           }
-        ).populate("bookings");
+        ).populate('bookings');
       }
       // If user attempts to execute this mutation and isn't logged in, throw an error
-      throw new AuthenticationError("You need to be logged in!");
+      throw new AuthenticationError('You need to be logged in!');
     },
     // mutation for deleting booking
     deleteBooking: async (parent, { bookingId }, context) => {
@@ -85,10 +86,10 @@ const resolvers = {
           {
             $pull: { bookings: booking._id },
           }
-        ).populate("bookings");
+        ).populate('bookings');
       }
       // If user attempts to execute this mutation and isn't logged in, throw an error
-      throw new AuthenticationError("You need to be logged in!");
+      throw new AuthenticationError('You need to be logged in!');
     },
   },
 };
