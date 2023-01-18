@@ -1,6 +1,6 @@
-const { User, Booking, Category, Product } = require("../models");
-const { signToken } = require("../utils/auth");
-const { AuthenticationError } = require("apollo-server-express");
+const { User, Booking, Category, Product } = require('../models');
+const { signToken } = require('../utils/auth');
+const { AuthenticationError } = require('apollo-server-express');
 
 
 const resolvers = {
@@ -31,7 +31,7 @@ const resolvers = {
     },
     product: async (parent, { id }) =>
       Product.findById(id).populate('category'),
-    
+
   },
   Mutation: {
     // mutation for adding new user
