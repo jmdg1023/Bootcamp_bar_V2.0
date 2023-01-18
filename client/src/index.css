@@ -1,3 +1,7 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 :root {
   --primary: #5a545a;
   --secondary: #f6858f;
@@ -21,7 +25,7 @@ body {
 body {
   margin: 0;
   padding: 0;
-  font-family:'Courier New', Courier, monospace;
+  font-family: 'Courier New', Courier, monospace;
   font-weight: 300;
   line-height: 1.5;
   font-size: 24px;
@@ -35,7 +39,7 @@ h3,
 h4,
 h5,
 h6 {
-  font-family:'Courier New', Courier, monospace;
+  font-family: 'Courier New', Courier, monospace;
   font-weight: 200;
   margin: 5px 0;
   line-height: 1.25;
@@ -92,29 +96,29 @@ button {
   font-size: 1.2rem;
   text-decoration: none;
   padding: 0.25rem 1rem;
-  border-radius: .3rem;
+  border-radius: 0.3rem;
   border: none;
   cursor: pointer;
-  margin:0 2px;
-  background-color:  rgba(255, 255, 255, 0.65);
+  margin: 0 2px;
+  background-color: rgba(255, 255, 255, 0.65);
   font-family: 'Courier New', Courier, monospace;
   font-weight: 500;
 }
 
 button:hover {
-  opacity: .8;
+  opacity: 0.8;
 }
 
 button[disabled] {
   cursor: default;
-  opacity: .8;
+  opacity: 0.8;
 }
 
 img {
   max-width: 100%;
 }
 
-span[role="img"] {
+span[role='img'] {
   cursor: default;
 }
 
@@ -129,13 +133,13 @@ input {
 
 input:focus {
   border: 1px solid var(--secondary);
-  box-shadow: 0 0 .25rem rgba(0, 0, 0, .5);
+  box-shadow: 0 0 0.25rem rgba(0, 0, 0, 0.5);
 }
 
 li {
   list-style: none;
   background-color: rgba(255, 255, 255, 0.65);
-  border-radius: .3rem;
+  border-radius: 0.3rem;
   padding: 0.25rem 1rem;
 }
 
@@ -149,11 +153,6 @@ li {
 .flex-wrap {
   display: flex;
   flex-wrap: wrap;
-}
-
-.flex-row {
-  display: flex;
-  flex-direction: row;
 }
 
 .flex-col {
@@ -223,14 +222,10 @@ li {
   margin-top: 10rem;
 }
 
-.underline {
-  text-decoration: underline;
-}
-
 .product-card {
   width: 270px;
   text-align: center;
-  background-color: rgba(0,0,0,.65);
+  background-color: rgba(0, 0, 0, 0.65);
   margin: 1rem;
   padding: 2rem;
   border-radius: 10%;
@@ -255,15 +250,15 @@ li {
   margin: 1rem;
   padding: 1rem;
   border-radius: 10%;
-  color:#272f32;
+  color: #272f32;
 }
 
 .booking-form {
-  width: 25%
+  width: 25%;
 }
 
-.active-bookings{
-  background-color: rgba(0,0,0,.65);
+.active-bookings {
+  background-color: rgba(0, 0, 0, 0.65);
   padding: 4em;
   margin: 4rem;
   border-radius: 10% 25%;
@@ -274,23 +269,11 @@ li {
   color: var(--error);
 }
 
-.black-card-bg {
-  background-color: rgba(0,0,0,.65);
-  padding: 4em;
-  margin: 4rem;
-  border-radius: 10% 25%;
-  width: fit-content;
-  height: fit-content;
-}
-
-
 .bg-home {
   background: url('./assets/bar-bg.jpg');
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  width: 100vw;
-  height: 100vh;
 }
 
 .bg-signup {
@@ -298,8 +281,6 @@ li {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  width: 100vw;
-  height: 100vh;
 }
 
 .bg-dashboard {
@@ -307,8 +288,6 @@ li {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  width: 100vw;
-  height: 100vh;
 }
 
 .bg-menu {
@@ -316,9 +295,6 @@ li {
   background-position: center;
   background-size: cover;
   background-repeat: repeat-y;
-  background-attachment: fixed;
-  width: 100vw;
-  height: 100vh;
 }
 
 .bg-detail {
@@ -327,10 +303,7 @@ li {
   background-size: cover;
   background-repeat: no-repeat;
   background-attachment: fixed;
-  width: 100vw;
-  height: 100vh;
 }
-
 
 @media screen and (max-width: 768px) {
   .card {
