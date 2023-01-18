@@ -25,7 +25,7 @@ db.once('open', async () => {
       name: 'Vampires Attic',
       description:
         'Black Vodka, Lemon Juice, Grape Juice, Club Soda, Dry Ice, Blackberries Garnish',
-      image: '/images/vampires-attic.jpg',
+      image: 'vampires-attic.jpg',
       category: categories[0]._id,
       price: 29,
       quantity: 1
@@ -34,7 +34,7 @@ db.once('open', async () => {
       name: 'All Greengit',
       description:
         'Finlandia Vodka, lemon juice, bergamot cordial, lemon bitter, cucumber, rosemary, leaves of basil, Egg white',
-      image: '/images/all-green.jpg',
+      image: 'all-green.jpg',
       category: categories[0]._id,
       price: 29,
       quantity: 1
@@ -44,7 +44,7 @@ db.once('open', async () => {
       category: categories[1]._id,
       description:
         'Gin, fresh lemon juice, simple syrup, egg white, raspberries Garnish: pink rose',
-      image: '/images/clover-club.jpg',
+      image: 'clover-club.jpg',
       price: 19,
       quantity: 1
     },

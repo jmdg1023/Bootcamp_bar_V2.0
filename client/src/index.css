@@ -215,12 +215,19 @@ input:focus {
 }
 
 .product-card {
+  width: 20%;
+  text-align: center;
+  background-color: rgba(0,0,0,.65);
+  margin: 1rem;
+  padding: 2rem;
+}
+
+.booking-card {
   width: fit-content;
   text-align: center;
   background-color: rgba(0,0,0,.65);
   margin: 1rem;
   padding: 2rem;
-
 }
 
 .error-text {
@@ -267,8 +274,10 @@ input:focus {
   background: url('./assets/bar4-bg.jpg');
   background-position: center;
   background-size: cover;
+  background-attachment: fixed;
   width: 100vw;
   height: 100vh;
+
 }
 
 .bg-cart {

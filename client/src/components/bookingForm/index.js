@@ -29,8 +29,11 @@ function BookingForm() {
         },
       });
       console.log(response);
+      alert('Booking Submitted');
+      return;
     } catch (error) {
       console.error(error.message);
+    
     }
   };
 

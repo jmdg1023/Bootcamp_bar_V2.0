@@ -1,16 +1,26 @@
-import React from 'react';
-// import { useStoreContext } from '../../utils/GlobalState';
+import React from "react";
+import { Link } from "react-router-dom";
+// import { pluralize } from "../../utils/helpers"
+// import { useStoreContext } from "../../utils/GlobalState";
 
 function ProductItem(item) {
-  // const [state, dispatch] = useStoreContext();
 
-  const { image, name } = item;
+  const {
+    image,
+    name,
+    _id,
+    description,
+  } = item;
 
   return (
     <div className="product-card">
-      <h1>{name}</h1>
-      <img alt={name} src={`/images/${image}`} />
-      <p>{name}</p>
+      <Link to={`/products/${_id}`}>
+        <img
+          alt={name}
+          src={`/images/${image}`}
+        />
+        <p>{description}</p>
+      </Link>
     </div>
   );
 }
