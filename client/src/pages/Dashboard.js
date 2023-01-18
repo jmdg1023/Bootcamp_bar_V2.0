@@ -1,7 +1,6 @@
 import React from 'react';
 // TODO add mutation in utils/mutations.js
 // import { useMutation } from '@apollo/client';
-// import { ADD_BOOKING } from '../utils/mutations';
 import { useQuery } from "@apollo/client";
 import BookingForm from "../components/bookingForm";
 import { QUERY_USER } from "../utils/queries";
@@ -14,10 +13,15 @@ const Dashboard = () => {
     <div className="bg-dashboard">
       {data ? (
         <>
-          <h2>Welcome {data.me.firstName} !</h2>
+          <h1 className='px-2 py-2'>Welcome {data.me.firstName} !</h1>
           <div className="flex-row center-content">
-            <BookingForm />
-            <Bookings bookings={data.me.bookings} />
+            <div className='booking-form'>
+              <BookingForm />
+            </div>
+            <div className='active-bookings'>
+              <h3 className='underline'>Your active bookings:</h3>
+              <Bookings bookings={data.me.bookings} />
+            </div>
           </div>
         </>
       ) : null}

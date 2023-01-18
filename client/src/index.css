@@ -59,6 +59,7 @@ h4 {
 
 h5 {
   font-size: 1.25rem;
+  text-decoration: underline;
 }
 
 h6 {
@@ -214,6 +215,10 @@ input:focus {
   margin-top: 10rem;
 }
 
+.underline {
+  text-decoration: underline;
+}
+
 .product-card {
   width: 20%;
   text-align: center;
@@ -222,12 +227,27 @@ input:focus {
   padding: 2rem;
 }
 
-.booking-card {
+.booking-component {
   width: fit-content;
   text-align: center;
-  background-color: rgba(0,0,0,.65);
+  background-color: rgba(255, 255, 255, 0.65);
   margin: 1rem;
-  padding: 2rem;
+  padding: 1rem;
+  border-radius: 10%;
+  color:#272f32;
+}
+
+.booking-form {
+  width: 25%
+
+}
+
+.active-bookings{
+  background-color: rgba(0,0,0,.65);
+  padding: 4em;
+  margin: 4rem;
+  border-radius: 10% 25%;
+  width: 75%;
 }
 
 .error-text {
