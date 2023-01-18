@@ -14,12 +14,13 @@ function ProductItem(item) {
 
   return (
     <div className="product-card">
-      <Link to={`/products/${_id}`}>
+      <Link to={`/menu/${_id}`}>
         <img
+          className="image"
           alt={name}
           src={`/images/${image}`}
         />
-        <p>{description}</p>
+          <h4>{name}</h4>
       </Link>
     </div>
   );
