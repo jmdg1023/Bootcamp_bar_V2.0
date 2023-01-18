@@ -53,7 +53,7 @@ db.once('open', async () => {
       category: categories[1]._id,
       description:
         'Four Pillars Bloody Shiraz Gin, Fresh Lemon Juice, Hibiscus Syrup,Hibiscus Vanilla Ginger Brew',
-      image: '/images/in-my-heart.jpg',
+      image: 'in-my-heart.jpg',
       price: 29,
       quantity: 1
     },
@@ -62,7 +62,7 @@ db.once('open', async () => {
       category: categories[1]._id,
       description:
         'Gin, Supasawa,⁣ simple syrup⁣, pine liqueur,⁣ dash woodland bitters,⁣ Electric Sky Spirulina powder⁣',
-      image: '/images/glacier-sour.jpg',
+      image: 'glacier-sour.jpg',
       price: 29,
       quantity: 1
     },
@@ -72,7 +72,7 @@ db.once('open', async () => {
       category: categories[2]._id,
       description:
         'butterfly pea tequila, Top with grapefruit soda, lime,',
-      image: '/images/butterfly-pea-paloma.jpg',
+      image: 'butterfly-pea-paloma.jpg',
       price: 24,
       quantity: 1
     },
@@ -81,7 +81,7 @@ db.once('open', async () => {
       category: categories[2]._id,
       description:
         ' tequila blanco, lime juice syrup, triple sec, physalis berries, Rose Flower',
-      image: '/images/spicy-physalis-&-rose-margarita',
+      image: 'physalis-rose-margarita.jpg',
       price: 30,
       quantity: 1
     },
@@ -90,7 +90,7 @@ db.once('open', async () => {
       category: categories[3]._id,
       description:
         'The Real McCoy 3yr old Rum, Lime Juice, Simple Syrup, Blue Curacao, Mint Leaves, Soda Water',
-      image: '/images/monito.jpg',
+      image: 'monito.jpg',
       price: 29,
       quantity: 1
     },
@@ -99,7 +99,7 @@ db.once('open', async () => {
       category: categories[4]._id,
       description:
         'Donec volutpat erat erat, sit amet gravida justo sodales in. Phasellus tempus euismod urna. Proin ultrices nisi ut ipsum congue, vitae porttitor libero suscipit. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Aliquam lacinia a nisi non congue.',
-      image: '/images/barrell-proof-bourbon-swizzle.jpg',
+      image: 'barrell-proof-bourbon-swizzle.jpg',
       price: 29,
       quantity: 20
     },
@@ -108,7 +108,7 @@ db.once('open', async () => {
       category: categories[5]._id,
       description:
         'Mezcal, Pisco, fresh lime juice, simple syrup, Egg white, cucumber slice',
-      image: '/images/smoke.jpg',
+      image: 'smoke.jpg',
       price: 19,
       quantity: 1
     },
@@ -117,7 +117,7 @@ db.once('open', async () => {
       category: categories[5]._id,
       description:
         '▪️Del Maguey Vida Mezcal,Amaro Branca Menta, AbsintheTempus Fugit White Creme De Menthe, Heavy Cream, Dark Chocolate & Mint Sprig Garnish',
-      image: '/images/grasshopper.jpg',
+      image: 'grasshopper.jpg',
       price: 29,
       quantity: 1
     },
@@ -125,7 +125,7 @@ db.once('open', async () => {
       name: 'fresh pear',
       description:
         ' Fresh Pear Juice, Lime Juice, Rose Water, Orange Bitters',
-      image: '/images/fresh-pear.jpg',
+      image: 'fresh-pear.jpg',
       category: categories[6]._id,
       price: 19,
       quantity: 1
@@ -134,7 +134,7 @@ db.once('open', async () => {
       name: 'Mind traveller',
       category: categories[7]._id,
       description: 'Yuzu Liqueur, Campari, Lemon Juice, Angostura Bitters, Aquafaba',
-      image: '/images/mind-traveller.jpg',
+      image: 'mind-traveller.jpg',
       price: 19,
       quantity: 1
     },
