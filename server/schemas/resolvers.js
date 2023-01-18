@@ -13,6 +13,24 @@ const resolvers = {
       throw new AuthenticationError("You need to be logged in!");
     },
     categories: async () => Category.find(),
+    products: async (parent, { category, name }) => {
+      const params = {};
+
+      if (category) {
+        params.category = category;
+      }
+
+      if (name) {
+        params.name = {
+          $regex: name,
+        };
+      }
+
+      return Product.find(params).populate('category');
+    },
+    product: async (parent, { id }) =>
+      Product.findById(id).populate('category'),
+    
   },
   Mutation: {
     // mutation for adding new user
