@@ -35,14 +35,14 @@ function CategoryMenu() {
     <div>
       <h2>Alcohol Base:</h2>
       {categories.map((item) => (
-        <button
-          key={item._id}
-          onClick={() => {
-            handleClick(item._id);
-          }}
-        >
-          {item.name}
-        </button>
+          <button 
+            key={item._id}
+            onClick={() => {
+              handleClick(item._id);
+            }}
+          >
+            {item.name}
+          </button>
       ))}
     </div>
   );

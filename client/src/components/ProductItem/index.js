@@ -16,10 +16,11 @@ function ProductItem(item) {
     <div className="product-card">
       <Link to={`/products/${_id}`}>
         <img
+          className="image"
           alt={name}
           src={`/images/${image}`}
         />
-        <p>{description}</p>
+        <h4>{name}</h4>
       </Link>
     </div>
   );

@@ -225,6 +225,11 @@ input:focus {
   background-color: rgba(0,0,0,.65);
   margin: 1rem;
   padding: 2rem;
+  border-radius: 10%;
+}
+
+.image {
+  border-radius: 10% 10% 0 0;
 }
 
 .booking-component {
@@ -294,6 +299,7 @@ input:focus {
   background: url('./assets/bar4-bg.jpg');
   background-position: center;
   background-size: cover;
+  background-repeat: no-repeat;
   background-attachment: fixed;
   width: 100vw;
   height: 100vh;
