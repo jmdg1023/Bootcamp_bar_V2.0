@@ -1,4 +1,4 @@
-const mongoose = require("mongoose");
+const mongoose = require('mongoose');
 
 const { Schema } = mongoose;
 
@@ -14,14 +14,14 @@ const bookingSchema = new Schema({
   seating: {
     type: Schema.Types.String,
     required: true,
-    enum: ["6PM", "8PM"],
+    enum: ['6PM', '8PM'],
   },
   user: {
     type: Schema.Types.ObjectId,
-    ref: "User",
+    ref: 'User',
   },
 });
 
-const Booking = mongoose.model("Booking", bookingSchema);
+const Booking = mongoose.model('Booking', bookingSchema);
 
 module.exports = Booking;

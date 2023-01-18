@@ -8,19 +8,23 @@
     "develop": "concurrently \"cd server && npm run watch\" \"cd client && npm start\"",
     "install": "cd server && npm i && cd ../client && npm i",
     "seed": "cd server && npm run seed",
-    "build": "cd client && npm run build"
+    "build": "cd client && npm run build",
+    "lint": "npx eslint **/*js --fix"
   },
   "author": "",
   "license": "ISC",
   "devDependencies": {
     "concurrently": "^5.3.0",
-    "nodemon": "^2.0.20"
+    "eslint": "^7.11.0",
+    "eslint-config-prettier": "^8.6.0",
+    "nodemon": "^2.0.20",
+    "prettier": "^2.8.3"
   },
   "dependencies": {
     "jsonwebtoken": "^9.0.0",
     "nodemailer": "^6.9.0"
   },
-  "engines" : { 
-    "node" : ">=16.0.0 <17.0.0"
+  "engines": {
+    "node": ">=16.0.0 <17.0.0"
   }
 }
