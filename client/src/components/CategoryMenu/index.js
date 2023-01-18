@@ -32,8 +32,8 @@ function CategoryMenu() {
   };
 
   return (
-    <div>
-      <h2>Alcohol Base:</h2>
+    <div className='py-2'>
+      <h4>Filter based on alcohol</h4>
       {categories.map((item) => (
           <button 
             key={item._id}

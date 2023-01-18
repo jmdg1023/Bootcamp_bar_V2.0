@@ -8,7 +8,7 @@ db.once('open', async () => {
     { name: 'Vodka' },
     { name: 'Gin' },
     { name: 'Tequila' },
-    { name: 'Rum' },
+    { name: 'Rum' }, 
     { name: 'Bourbon' },
     { name: 'Mezcal' },
     { name: 'Mocktail' },
@@ -27,8 +27,6 @@ db.once('open', async () => {
         'Black Vodka, Lemon Juice, Grape Juice, Club Soda, Dry Ice, Blackberries Garnish',
       image: 'vampires-attic.jpg',
       category: categories[0]._id,
-      price: 29,
-      quantity: 1
     },
     {
       name: 'All Greengit',
@@ -36,8 +34,6 @@ db.once('open', async () => {
         'Finlandia Vodka, lemon juice, bergamot cordial, lemon bitter, cucumber, rosemary, leaves of basil, Egg white',
       image: 'all-green.jpg',
       category: categories[0]._id,
-      price: 29,
-      quantity: 1
     },
     {
       name: 'Clover Club',
@@ -45,8 +41,6 @@ db.once('open', async () => {
       description:
         'Gin, fresh lemon juice, simple syrup, egg white, raspberries Garnish: pink rose',
       image: 'clover-club.jpg',
-      price: 19,
-      quantity: 1
     },
     {
       name: 'In My heart',
@@ -54,8 +48,6 @@ db.once('open', async () => {
       description:
         'Four Pillars Bloody Shiraz Gin, Fresh Lemon Juice, Hibiscus Syrup,Hibiscus Vanilla Ginger Brew',
       image: 'in-my-heart.jpg',
-      price: 29,
-      quantity: 1
     },
     {
       name: 'Glacier Sour',
@@ -63,8 +55,6 @@ db.once('open', async () => {
       description:
         'Gin, Supasawa,⁣ simple syrup⁣, pine liqueur,⁣ dash woodland bitters,⁣ Electric Sky Spirulina powder⁣',
       image: 'glacier-sour.jpg',
-      price: 29,
-      quantity: 1
     },
 
     {
@@ -73,8 +63,6 @@ db.once('open', async () => {
       description:
         'butterfly pea tequila, Top with grapefruit soda, lime,',
       image: 'butterfly-pea-paloma.jpg',
-      price: 24,
-      quantity: 1
     },
     {
       name: 'Physalis Rose margarita',
@@ -82,8 +70,6 @@ db.once('open', async () => {
       description:
         ' tequila blanco, lime juice syrup, triple sec, physalis berries, Rose Flower',
       image: 'physalis-rose-margarita.jpg',
-      price: 30,
-      quantity: 1
     },
     {
       name: 'Monito',
@@ -91,8 +77,6 @@ db.once('open', async () => {
       description:
         'The Real McCoy 3yr old Rum, Lime Juice, Simple Syrup, Blue Curacao, Mint Leaves, Soda Water',
       image: 'monito.jpg',
-      price: 29,
-      quantity: 1
     },
     {
       name: 'Bourbon Swizzle',
@@ -100,8 +84,6 @@ db.once('open', async () => {
       description:
         'Donec volutpat erat erat, sit amet gravida justo sodales in. Phasellus tempus euismod urna. Proin ultrices nisi ut ipsum congue, vitae porttitor libero suscipit. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Aliquam lacinia a nisi non congue.',
       image: 'barrell-proof-bourbon-swizzle.jpg',
-      price: 29,
-      quantity: 20
     },
     {
       name: 'Smoke',
@@ -109,8 +91,6 @@ db.once('open', async () => {
       description:
         'Mezcal, Pisco, fresh lime juice, simple syrup, Egg white, cucumber slice',
       image: 'smoke.jpg',
-      price: 19,
-      quantity: 1
     },
     {
       name: 'Grasshopper',
@@ -118,25 +98,19 @@ db.once('open', async () => {
       description:
         '▪️Del Maguey Vida Mezcal,Amaro Branca Menta, AbsintheTempus Fugit White Creme De Menthe, Heavy Cream, Dark Chocolate & Mint Sprig Garnish',
       image: 'grasshopper.jpg',
-      price: 29,
-      quantity: 1
     },
     {
-      name: 'fresh pear',
+      name: 'Fresh pear',
       description:
         ' Fresh Pear Juice, Lime Juice, Rose Water, Orange Bitters',
       image: 'fresh-pear.jpg',
       category: categories[6]._id,
-      price: 19,
-      quantity: 1
     },
     {
       name: 'Mind traveller',
       category: categories[7]._id,
       description: 'Yuzu Liqueur, Campari, Lemon Juice, Angostura Bitters, Aquafaba',
       image: 'mind-traveller.jpg',
-      price: 19,
-      quantity: 1
     },
 
 
