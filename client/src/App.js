@@ -9,6 +9,7 @@ import React from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Header from './components/Header';
 import Dashboard from './pages/Dashboard';
+import Detail from './pages/Detail';
 import Home from './pages/Home';
 import Menu from './pages/Menu';
 import NoMatch from './pages/NoMatch';
@@ -51,6 +52,7 @@ function App() {
               <Route path="/dashboard" element={<Dashboard />} />
               <Route path="/menu" element={<Menu />} />
               <Route path="/signup" element={<Signup />} />
+              <Route path="/menu/:id" element={<Detail />} />
               <Route path="*" element={<NoMatch />} />
             </Routes>
           </StoreProvider>
