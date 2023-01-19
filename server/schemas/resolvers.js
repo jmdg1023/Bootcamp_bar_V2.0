@@ -1,7 +1,8 @@
 const { User, Booking, Category, Product } = require('../models');
 const { signToken } = require('../utils/auth');
 const { AuthenticationError } = require('apollo-server-express');
-
+const email = require('../utils/email');
+const moment = require('moment-timezone');
 
 const resolvers = {
   Query: {
@@ -31,13 +32,15 @@ const resolvers = {
     },
     product: async (parent, { id }) =>
       Product.findById(id).populate('category'),
-
   },
   Mutation: {
     // mutation for adding new user
     addUser: async (parent, { input }) => {
       const user = await User.create(input);
       const token = signToken(user);
+
+      // call function to send confirmation email in background
+      email.sendConfirmation(user.email, user.firstName);
 
       return { token, user };
     },
@@ -62,15 +65,31 @@ const resolvers = {
     addBooking: async (parent, { input }, context) => {
       // If context has a `user` property, that means the user executing this mutation has a valid JWT and is logged in
       if (context.user) {
-        const user = context.user._id;
-        const booking = await Booking.create({ ...input, user });
+        const booking = await Booking.create({
+          ...input,
+          user: context.user._id,
+        });
 
-        return User.findOneAndUpdate(
+        const user = await User.findOneAndUpdate(
           { _id: context.user._id },
           {
             $push: { bookings: booking },
+          },
+          {
+            new: true,
           }
         ).populate('bookings');
+
+        // call function to send booking confirmation email in background
+        email.sendBookingConfirmation(
+          user.email,
+          user.firstName,
+          moment(booking.date).tz('Australia/Sydney').format('DD/MM/YYYY'),
+          booking.seating,
+          booking.seats
+        );
+
+        return user;
       }
       // If user attempts to execute this mutation and isn't logged in, throw an error
       throw new AuthenticationError('You need to be logged in!');
@@ -81,12 +100,26 @@ const resolvers = {
       if (context.user) {
         const booking = await Booking.findOneAndDelete({ _id: bookingId });
 
-        return User.findOneAndUpdate(
+        const user = await User.findOneAndUpdate(
           { _id: context.user._id },
           {
             $pull: { bookings: booking._id },
+          },
+          {
+            new: true,
           }
         ).populate('bookings');
+
+        // call function to send booking cancellation email in background
+        email.sendBookingCancellation(
+          user.email,
+          user.firstName,
+          moment(booking.date).tz('Australia/Sydney').format('DD/MM/YYYY'),
+          booking.seating,
+          booking.seats
+        );
+
+        return user;
       }
       // If user attempts to execute this mutation and isn't logged in, throw an error
       throw new AuthenticationError('You need to be logged in!');

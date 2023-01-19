@@ -1,7 +1,6 @@
 const nodemailer = require('nodemailer');
 
-
-let transporter = nodemailer.createTransport({
+const transporter = nodemailer.createTransport({
   service: 'gmail',
   secure: false,
   auth: {
@@ -9,23 +8,49 @@ let transporter = nodemailer.createTransport({
     user: process.env.SENDER_EMAIL,
     pass: process.env.SENDER_PW,
   },
-
 });
 
+async function sendBookingCancellation(email, firstName, date, time, seats) {
+  try {
+    await transporter.sendMail({
+      from: process.env.SENDER_EMAIL, // sender address
+      to: email, // list of receivers
+      subject: 'Bootcamp Bar: Booking Cancellation', // Subject line
+      html: `<p>Hi ${firstName}, your booking on ${date} at ${time} for ${seats} people has been successfully cancelled.</p>`, // plain text body
+    });
+  } catch (error) {
+    console.log(error);
+  }
+}
 
-async function sendConfirmation(user) {
+async function sendBookingConfirmation(email, firstName, date, time, seats) {
+  try {
+    await transporter.sendMail({
+      from: process.env.SENDER_EMAIL, // sender address
+      to: email, // list of receivers
+      subject: 'Bootcamp Bar: Booking Confirmation', // Subject line
+      html: `<p>Hi ${firstName}, here is your booking confirmation:<br/><br/>Date: ${date}<br/>Time: ${time}<br/>Seats: ${seats}</p>`, // plain text body
+    });
+  } catch (error) {
+    console.log(error);
+  }
+}
 
-  let welcome = await transporter.sendMail({
-    from: 'bootcamp.bar.bookings@gmail.com', // sender address
-    to: user, // list of receivers
-    subject: 'Welcome to Bootcamp Bar', // Subject line
-    html: '<p> Thanks for creating an account with us. We look forward to seeing you at your next booking </p>' // plain text body
-  });
-
-  console.log('Message sent: %s', welcome.messageId);
-
+async function sendConfirmation(email, firstName) {
+  try {
+    await transporter.sendMail({
+      from: process.env.SENDER_EMAIL, // sender address
+      to: email, // list of receivers
+      subject: 'Welcome to Bootcamp Bar', // Subject line
+      html: `<p>Thanks for creating an account with us ${firstName}. We look forward to seeing you at your next booking. 😊</p>`, // plain text body
+    });
+  } catch (error) {
+    console.log(error);
+  }
 }
 
 module.exports = {
-  sendConfirmation
+  sendConfirmation,
+  sendBookingConfirmation,
+  sendBookingCancellation,
 };
