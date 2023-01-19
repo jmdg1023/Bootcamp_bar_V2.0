@@ -1,7 +1,7 @@
 import { Disclosure } from '@headlessui/react';
 import { MdClose, MdMenu } from 'react-icons/md';
 import { NavLink } from 'react-router-dom';
-import Auth from '../utils/auth';
+import Auth from '../../utils/auth';
 
 function classNames(...classes) {
   return classes.filter(Boolean).join(' ');
@@ -52,7 +52,7 @@ export default function Header() {
     <Disclosure as="nav" className="bg-gray-800">
       {({ open }) => (
         <>
-          <div className="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
+          <div className="max-w-7xl px-2 sm:px-6 lg:px-8">
             <div className="relative flex h-16 items-center justify-between">
               <div className="absolute inset-y-0 left-0 flex items-center sm:hidden">
                 {/* Mobile menu button*/}
@@ -69,7 +69,7 @@ export default function Header() {
                 <NavLink
                   to="/"
                   end
-                  className="flex flex-shrink-0 items-center text-white text-lg font-bold"
+                  className="flex flex-shrink-0 items-center text-white text-xlg font-bold"
                 >
                   <span role="img" aria-label="drinks">
                     🥂

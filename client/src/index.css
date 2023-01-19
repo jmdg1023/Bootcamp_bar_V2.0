@@ -97,12 +97,14 @@ button {
   text-decoration: none;
   padding: 0.25rem 1rem;
   border-radius: 0.3rem;
-  border: none;
+  border: solid;
+  border-width: 1px;
   cursor: pointer;
   margin: 0 2px;
   background-color: rgba(255, 255, 255, 0.65);
   font-family: 'Courier New', Courier, monospace;
   font-weight: 500;
+  color:#272f32;
 }
 
 button:hover {
@@ -145,7 +147,6 @@ li {
 
 .container {
   width: 85%;
-  /* max-width: 1200px; */
   margin-left: 10%;
   margin-right: 10%;
 }
@@ -231,12 +232,28 @@ li {
   border-radius: 10%;
 }
 
+.product-card:hover {
+  border: solid;
+  border-width: 2px;
+  border-color: var(--tertiary);
+}
+
+.black-bg {
+  background-color: rgba(0,0,0,.65);
+  padding: 4rem;
+  margin: 4rem;
+  border-radius: 10% 25%;
+  width: 50vh;
+  height:40vh;
+}
+
 .image {
   border-radius: 10% 10% 0 0;
 }
 
 .product-image {
-  width: 45%;
+  width: 45vh;
+  height: 60vh;
 }
 
 .border-radius {
@@ -269,6 +286,19 @@ li {
   color: var(--error);
 }
 
+.emphasis {
+  color: var(--tertiary);
+  background-color: rgba(0, 0, 0, 0.65);
+  border: solid;
+  border-width: 1px;
+  border-color: var(--tertiary);
+}
+
+.emphasis:hover {
+  color: var(--dark);
+  background-color: rgba(255, 255, 255, 0.65);
+}
+
 .bg-home {
   background: url('./assets/bar-bg.jpg');
   background-position: center;
@@ -281,6 +311,7 @@ li {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+  height: 100vh;
 }
 
 .bg-dashboard {
@@ -288,13 +319,18 @@ li {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+  height: 100vh;
 }
 
 .bg-menu {
-  background: url('./assets/bar4-bg.jpg');
+  background: url('./assets/bar4-bg.jpg') center top no-repeat fixed;
   background-position: center;
+  background-repeat: no-repeat;
   background-size: cover;
-  background-repeat: repeat-y;
+  background-attachment: local;
+  height: 100vh;
+
+
 }
 
 .bg-detail {
@@ -303,6 +339,7 @@ li {
   background-size: cover;
   background-repeat: no-repeat;
   background-attachment: fixed;
+  height:100vh;
 }
 
 @media screen and (max-width: 768px) {

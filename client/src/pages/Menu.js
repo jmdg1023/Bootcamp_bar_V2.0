@@ -5,9 +5,9 @@ import ProductList from '../components/ProductList';
 const Menu = () => {
   return (
     <div className="bg-menu">
-      <div className="container">
+      <div className='container'>
         <CategoryMenu />
-        <ProductList />
+        <ProductList/>
       </div>
     </div>
   );
