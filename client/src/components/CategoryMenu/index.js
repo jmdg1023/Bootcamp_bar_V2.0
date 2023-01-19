@@ -31,9 +31,14 @@ function CategoryMenu() {
     });
   };
 
+  const refreshPage = () => {
+    window.location.reload();
+  }
+
   return (
     <div className='py-2'>
       <h4>Filter based on alcohol</h4>
+      <button className="emphasis" onClick={() => {refreshPage()}}>View All Drinks</button>
       {categories.map((item) => (
           <button 
             key={item._id}

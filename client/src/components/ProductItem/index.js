@@ -1,7 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-// import { pluralize } from "../../utils/helpers"
-// import { useStoreContext } from "../../utils/GlobalState";
+
 
 function ProductItem(item) {
 
@@ -9,7 +8,6 @@ function ProductItem(item) {
     image,
     name,
     _id,
-    description,
   } = item;
 
   return (

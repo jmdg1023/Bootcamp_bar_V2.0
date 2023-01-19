@@ -1,6 +1,6 @@
 import { useMutation } from '@apollo/client';
 import React, { useState } from 'react';
-import { ADD_BOOKING } from '../utils/mutations';
+import { ADD_BOOKING } from '../../utils/mutations';
 
 function BookingForm() {
   // state variables

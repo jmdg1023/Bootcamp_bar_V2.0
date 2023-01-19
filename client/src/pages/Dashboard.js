@@ -2,7 +2,7 @@ import React from 'react';
 // TODO add mutation in utils/mutations.js
 // import { useMutation } from '@apollo/client';
 import { useQuery } from '@apollo/client';
-import BookingForm from '../components/BookingForm';
+import BookingForm from '../components/BookingForm/index.js';
 import Bookings from '../components/bookings';
 import { QUERY_USER } from '../utils/queries';
 

@@ -36,8 +36,8 @@ function Detail() {
             <div className='underline'>
               <Link to="/drinks">← Back to menu</Link>
             </div>
-            <div className='flex-row mt-half-page'>
-              <div className='black-card-bg'>
+            <div className='flex flex-col md:flex-row gap-4'>
+              <div className='black-bg'>
                 <h2>{currentProduct.name}</h2>
 
                 <p>This drink contains: {currentProduct.description}</p>
