@@ -34,7 +34,7 @@ function Detail() {
         {currentProduct ? (
           <div className="container my-1">
             <div className='underline'>
-              <Link to="/menu">← Back to menu</Link>
+              <Link to="/drinks">← Back to menu</Link>
             </div>
             <div className='flex-row mt-half-page'>
               <div className='black-card-bg'>
