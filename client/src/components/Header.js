@@ -71,7 +71,7 @@ export default function Header() {
                   end
                   className="flex flex-shrink-0 items-center text-white text-lg font-bold"
                 >
-                  <span role="img" aria-label="shopping bag">
+                  <span role="img" aria-label="drinks">
                     🥂
                   </span>
                   Bootcamp Bar

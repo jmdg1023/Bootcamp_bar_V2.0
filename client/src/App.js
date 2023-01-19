@@ -50,9 +50,9 @@ function App() {
             <Routes>
               <Route path="/" element={<Home />} />
               <Route path="/dashboard" element={<Dashboard />} />
-              <Route path="/menu" element={<Menu />} />
+              <Route path="/drinks" element={<Menu />} />
               <Route path="/signup" element={<Signup />} />
-              <Route path="/menu/:id" element={<Detail />} />
+              <Route path="/drinks/:id" element={<Detail />} />
               <Route path="*" element={<NoMatch />} />
             </Routes>
           </StoreProvider>
