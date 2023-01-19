@@ -1,6 +1,6 @@
 const mongoose = require('mongoose');
 
-mongoose.connect(process.env.MONGODB_URI || 'mongodb://127.0.0.1:27017/bootcamp_bar', {
+mongoose.connect(process.env.MONGODB_URI || 'mongodb+srv://bootcampbar123:Q8zK7ixWfK1AVgGk@cluster0.3vfjcwv.mongodb.net/bootcamp_bar?retryWrites=true&w=majority', {
   useNewUrlParser: true,
   useUnifiedTopology: true,
 });
